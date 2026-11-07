@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>10 Kids Hero Options — Eureka Academy</title><meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Baloo+2:wght@600;800&family=Caveat:wght@700&family=Inter:wght@500;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:Inter,sans-serif;background:#F5F5F4;color:#1C1917}
+.top{padding:28px 24px 8px;max-width:1240px;margin:auto}.top h1{font:700 30px Fredoka}.top p{color:#57534E;margin-top:6px}
+.opt{max-width:1240px;margin:28px auto;padding:0 24px}.lab{display:flex;align-items:center;gap:10px;margin-bottom:10px}.lab b{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#F97316;color:#fff;font-family:Fredoka}.lab span{font:700 18px Fredoka}.lab small{color:#78716C}
+.h{position:relative;overflow:hidden;border-radius:32px;min-height:540px}
+h2,.f{font-family:Fredoka,sans-serif}h2{font-weight:700;font-size:clamp(2.4rem,1.4rem + 3.4vw,4.4rem);line-height:1}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:999px;font:700 17px Fredoka;text-decoration:none;border:0;cursor:pointer;box-shadow:0 6px 0 #0003;transition:transform .15s}.btn:hover{transform:translateY(-3px)}.btn:active{transform:translateY(3px);box-shadow:0 2px 0 #0003}
+.in{position:relative;z-index:3;padding:56px;max-width:600px}.sub{margin-top:14px;font:500 18px Fredoka;opacity:.9}
+@keyframes fl{50%{transform:translateY(-14px)}}@keyframes wig{25%{transform:rotate(-6deg)}75%{transform:rotate(6deg)}}@keyframes bob{50%{transform:translateY(-8px) rotate(3deg)}}@keyframes pop{from{transform:scale(0)}}
+img.ph{display:block;object-fit:cover}
+/* 1 crayon doodle */
+.k1{background:#FFFDF6;background-image:radial-gradient(#F5E6C8 1.4px,transparent 1.4px);background-size:22px 22px;display:grid;grid-template-columns:1.1fr 1fr;align-items:center}
+.k1 h2 span{display:inline-block;animation:wig 3s ease-in-out infinite}.k1 h2 span:nth-child(odd){animation-delay:.4s}
+.scr{position:absolute;pointer-events:none}.k1 .fr{position:relative;width:360px;height:360px;margin:auto}
+.k1 .fr img{position:absolute;inset:30px;width:300px;height:300px;border-radius:44% 56% 52% 48%/48% 44% 56% 52%;animation:blob 8s ease-in-out infinite}@keyframes blob{50%{border-radius:56% 44% 46% 54%/54% 56% 44% 46%}}
+.k1 .fr svg{position:absolute;inset:0}
+.cray{position:absolute;width:24px;height:130px;border-radius:6px 6px 3px 3px;animation:bob 3s ease-in-out infinite}.cray::before{content:"";position:absolute;top:-24px;left:0;border:12px solid transparent;border-bottom:24px solid inherit;border-bottom-color:inherit}
+/* 2 balloons */
+.k2{background:linear-gradient(180deg,#7DD3FC,#E0F2FE);text-align:center;display:grid;place-items:center}
+.k2 .in{margin:auto;max-width:720px}.k2 h2{color:#fff;text-shadow:0 5px 0 #0284C7}
+.bl{position:absolute;bottom:-160px;width:96px;cursor:pointer;animation:rise linear infinite;z-index:2}.bl .b{width:96px;height:116px;border-radius:50% 50% 48% 48%/56% 56% 44% 44%;display:grid;place-items:center;font:700 14px Fredoka;color:#fff;box-shadow:inset -12px -14px 0 #0002;position:relative}.bl .b::after{content:"";position:absolute;bottom:-8px;left:50%;margin-left:-7px;border:7px solid transparent;border-top:9px solid currentColor}
+.bl .s{width:2px;height:70px;background:#64748B;margin:4px auto 0}
+@keyframes rise{to{transform:translateY(-820px) rotate(6deg)}}
+.bl.popd{animation:none;opacity:0;transition:opacity .2s}.boom{position:absolute;font:700 26px Fredoka;color:#fff;pointer-events:none;animation:pop .3s,fade 1s forwards}@keyframes fade{to{opacity:0;transform:translateY(-30px)}}
+/* 3 ABC blocks */
+.k3{background:#FEF3C7;display:grid;grid-template-columns:1fr 1fr;align-items:center}
+.blocks{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;max-width:420px;margin:auto}
+.blk{width:110px;height:110px;border-radius:18px;display:grid;place-items:center;font:700 64px Fredoka;color:#fff;box-shadow:inset 0 -10px 0 #0002,0 14px 20px -12px #0008;animation:drop .7s cubic-bezier(.3,1.6,.5,1) both;cursor:pointer;transition:transform .2s}.blk:hover{transform:rotate(-8deg) scale(1.08)}
+@keyframes drop{from{transform:translateY(-500px) rotate(40deg)}}
+/* 4 kite sky */
+.k4{background:linear-gradient(180deg,#38BDF8,#BAE6FD 70%,#86EFAC 70%,#4ADE80)}
+.rain{position:absolute;right:-80px;bottom:120px;width:640px;height:320px;border-radius:320px 320px 0 0;background:radial-gradient(circle at 50% 100%,transparent 52%,#A78BFA 52% 57%,#60A5FA 57% 62%,#4ADE80 62% 67%,#FACC15 67% 72%,#FB923C 72% 77%,#F87171 77% 82%,transparent 82%)}
+.sun{position:absolute;right:60px;top:40px;width:110px;height:110px;border-radius:50%;background:#FDE047;box-shadow:0 0 0 18px #FDE04755,0 0 0 36px #FDE04722;animation:fl 5s ease-in-out infinite}
+.cl{position:absolute;z-index:1;width:140px;height:44px;background:#fff;border-radius:44px;animation:drift 30s linear infinite}.cl::before,.cl::after{content:"";position:absolute;background:#fff;border-radius:50%}.cl::before{width:60px;height:60px;left:22px;top:-28px}.cl::after{width:46px;height:46px;left:70px;top:-20px}
+@keyframes drift{from{transform:translateX(-200px)}to{transform:translateX(1400px)}}
+.kite{position:absolute;right:30%;top:16%;animation:kf 4s ease-in-out infinite;transform-origin:50% 100%}@keyframes kf{50%{transform:rotate(10deg) translate(20px,-14px)}}
+.k4 h2{color:#fff;text-shadow:0 5px 0 #0369A1}.k4 .sub{color:#fff}
+/* 5 underwater */
+.k5{background:linear-gradient(180deg,#22D3EE,#0E7490);color:#fff;display:grid;grid-template-columns:1fr 1fr;align-items:center}
+.bub{position:absolute;border-radius:50%;border:3px solid #ffffff99;background:radial-gradient(circle at 30% 30%,#fff8,transparent 50%);animation:bub linear infinite}@keyframes bub{from{transform:translateY(600px)}to{transform:translateY(-200px)}}
+.fish{position:absolute;font-size:46px;animation:swim 12s linear infinite}@keyframes swim{from{transform:translateX(-120px)}to{transform:translateX(1400px)}}
+.pb{position:relative;width:200px;height:200px;border-radius:50%;overflow:hidden;border:6px solid #ffffffaa;box-shadow:inset 0 0 30px #fff8;animation:fl 5s ease-in-out infinite}.pb img{width:100%;height:100%}
+.weed{position:absolute;bottom:-10px;width:30px;height:180px;background:#16A34A;border-radius:30px 30px 0 0;transform-origin:bottom;animation:sway 3s ease-in-out infinite}@keyframes sway{50%{transform:rotate(8deg)}}
+/* 6 space */
+.k6{background:radial-gradient(ellipse at 70% 30%,#4C1D95,#1E1B4B 60%,#0B0820);color:#fff}
+.star{position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;animation:tw 2s ease-in-out infinite}@keyframes tw{50%{opacity:.2}}
+.pl{position:absolute;display:flex;flex-direction:column;align-items:center;gap:6px;animation:fl 6s ease-in-out infinite;cursor:pointer}.pl span{display:grid;place-items:center;border-radius:50%;font-size:30px;box-shadow:inset -14px -10px 0 #0003,0 0 30px #fff3;transition:transform .3s}.pl:hover span{transform:scale(1.15)}.pl b{font:600 13px Fredoka;padding:3px 10px;border-radius:999px;background:#ffffff22}
+.rk{position:absolute;left:44%;bottom:-40px;font-size:80px;animation:launch 6s ease-in infinite}@keyframes launch{0%{transform:translateY(0)}60%{transform:translateY(-700px)}61%,100%{transform:translateY(200px)}}
+.k6 h2 em{font-style:normal;color:#FDE047}
+/* 7 jungle peek */
+.k7{background:linear-gradient(180deg,#FEF9C3,#BBF7D0);display:flex;flex-direction:column}
+.k7 .in{max-width:none;text-align:center;padding-bottom:0}.k7 h2{color:#166534}
+.bush{position:absolute;left:0;right:0;bottom:0;height:200px;display:flex;justify-content:space-around;align-items:flex-end}
+.an{position:relative;display:flex;flex-direction:column;align-items:center;animation:peek 4s ease-in-out infinite}.an .e{font-size:80px;line-height:1}.an .sg{margin-top:-6px;padding:8px 14px;border-radius:10px;background:#92400E;color:#FEF3C7;font:700 15px Fredoka;box-shadow:0 4px 0 #78350F;z-index:2}
+@keyframes peek{0%,100%{transform:translateY(40px)}30%,70%{transform:translateY(-30px)}}
+.leaf{position:absolute;left:0;right:0;bottom:0;height:90px;background:radial-gradient(circle at 10% 100%,#16A34A 60px,transparent 61px),radial-gradient(circle at 30% 100%,#22C55E 70px,transparent 71px),radial-gradient(circle at 52% 100%,#15803D 64px,transparent 65px),radial-gradient(circle at 74% 100%,#22C55E 72px,transparent 73px),radial-gradient(circle at 94% 100%,#16A34A 64px,transparent 65px);z-index:4}
+/* 8 train */
+.k8{background:linear-gradient(180deg,#FFEDD5,#FED7AA);display:flex;flex-direction:column}
+.k8 .in{max-width:none;text-align:center}.k8 h2{color:#9A3412}
+.track{position:absolute;left:0;right:0;bottom:60px;height:12px;background:repeating-linear-gradient(90deg,#78350F 0 10px,transparent 10px 40px),#A16207;background-size:40px 12px}
+.train{position:absolute;bottom:72px;display:flex;align-items:flex-end;gap:6px;animation:choo 26s linear infinite}@keyframes choo{from{transform:translateX(1300px)}to{transform:translateX(-2200px)}}
+.car{position:relative;width:150px;height:110px;border-radius:14px 14px 6px 6px;padding:8px;box-shadow:inset 0 -8px 0 #0002}.car img{width:100%;height:66px;border-radius:8px}.car b{display:block;margin-top:4px;font:700 13px Fredoka;color:#fff;text-align:center}
+.car::before,.car::after{content:"";position:absolute;bottom:-16px;width:30px;height:30px;border-radius:50%;background:#1F2937;border:5px solid #9CA3AF}.car::before{left:14px}.car::after{right:14px}
+.eng{width:150px;height:140px;background:#DC2626;border-radius:14px 40px 6px 6px;position:relative;font-size:56px;display:grid;place-items:center}.eng::before,.eng::after{content:"";position:absolute;bottom:-16px;width:36px;height:36px;border-radius:50%;background:#1F2937;border:5px solid #9CA3AF}.eng::before{left:12px}.eng::after{right:12px}
+.smk{position:absolute;top:-40px;left:22px;font-size:34px;animation:smk 1.5s ease-out infinite}@keyframes smk{to{transform:translate(30px,-40px) scale(1.6);opacity:0}}
+/* 9 notebook stickers */
+.k9{background:#fff repeating-linear-gradient(#fff 0 39px,#BFDBFE 39px 41px);border-left:0;display:grid;grid-template-columns:1fr 1.1fr;align-items:center}
+.k9::before{content:"";position:absolute;left:70px;top:0;bottom:0;width:3px;background:#F87171}
+.k9 .in{padding-left:110px}.k9 h2{font-family:Caveat,cursive;font-size:clamp(3rem,2rem + 3vw,5rem);color:#1E3A8A}
+.stk{position:absolute;width:180px;padding:8px;background:#fff;border-radius:20px;box-shadow:0 16px 24px -14px #0008;transition:transform .3s;cursor:pointer;animation:pop .5s cubic-bezier(.3,1.6,.5,1) both}.stk:hover{transform:rotate(0) scale(1.1)!important;z-index:5}
+.stk img{width:100%;aspect-ratio:1;border-radius:14px}.stk b{display:block;text-align:center;font:700 16px Fredoka;margin-top:4px}
+.stj{position:absolute;font-size:44px;animation:wig 2s ease-in-out infinite}
+/* 10 gumball */
+.k10{background:linear-gradient(135deg,#FBCFE8,#FDE68A);display:grid;grid-template-columns:1fr 1fr;align-items:center}
+.gm{position:relative;width:300px;margin:auto;text-align:center}
+.globe{width:280px;height:280px;border-radius:50%;background:radial-gradient(circle at 30% 25%,#ffffffcc,#ffffff44 40%,#ffffff22);border:8px solid #fff;position:relative;overflow:hidden;margin:auto;box-shadow:0 20px 30px -20px #0006}
+.gb{position:absolute;width:44px;height:44px;border-radius:50%;box-shadow:inset -6px -6px 0 #0002;transition:transform .4s}
+.base{width:200px;height:120px;margin:-10px auto 0;background:#DC2626;border-radius:20px 20px 30px 30px;position:relative;box-shadow:inset 0 -10px 0 #0002}.knob{position:absolute;left:50%;top:26px;margin-left:-28px;width:56px;height:56px;border-radius:50%;background:#FDE047;border:6px solid #CA8A04;cursor:pointer;transition:transform .6s}.knob.t{transform:rotate(360deg)}
+.prize{min-height:60px;margin-top:16px;font:700 22px Fredoka;color:#9D174D}.prize span{display:inline-block;animation:pop .4s cubic-bezier(.3,1.6,.5,1)}
+@media(max-width:800px){.h{min-height:480px}.k1,.k3,.k5,.k9,.k10{grid-template-columns:1fr}.in{padding:30px}.k9 .in{padding-left:84px}.k1 .fr{width:260px;height:260px}.k1 .fr img{inset:20px;width:220px;height:220px}.blk{width:76px;height:76px;font-size:44px}.rain{width:360px;height:180px;border-radius:180px 180px 0 0}.an .e{font-size:54px}.an .sg{font-size:12px}.stk{width:120px}}
+</style></head><body>
+<div class="top"><h1>10 kids-style hero designs 🎈</h1><p>Bright, playful and animated. Click, hover and pop things to try them. Tell me the number you like.</p></div>
+
+<div class="opt"><div class="lab"><b>1</b><span>Crayon doodles</span><small>· wiggly letters, blob photo, crayon scribbles</small></div>
+<section class="h k1"><svg class="scr" style="left:4%;top:8%" width="120" height="60"><path d="M5 40 Q 30 5 55 35 T 110 25" stroke="#F472B6" stroke-width="6" fill="none" stroke-linecap="round"/></svg><svg class="scr" style="left:42%;bottom:8%" width="90" height="90"><path d="M45 10 l10 22 24 3 -18 16 5 24 -21 -12 -21 12 5 -24 -18 -16 24 -3z" stroke="#FACC15" stroke-width="5" fill="none" stroke-linejoin="round"/></svg>
+<div class="in"><p class="f" style="color:#F97316;font-weight:700;font-size:18px">✏️ Eureka Academy</p><h2 style="color:#1E3A8A;margin-top:8px"><span>L</span><span>e</span><span>a</span><span>r</span><span>n</span>, <span style="color:#F97316">p</span><span style="color:#F97316">l</span><span style="color:#F97316">a</span><span style="color:#F97316">y</span><br>&amp; <span style="color:#16A34A">s</span><span style="color:#16A34A">h</span><span style="color:#16A34A">i</span><span style="color:#16A34A">n</span><span style="color:#16A34A">e</span>!</h2><p class="sub">Dance, phonics, abacus, art &amp; more in Moolapalayam, Erode.</p><div style="margin-top:24px"><a class="btn" style="background:#F97316;color:#fff">Let's play! →</a></div></div>
+<div class="fr"><svg viewBox="0 0 360 360"><circle cx="180" cy="180" r="168" fill="none" stroke="#60A5FA" stroke-width="6" stroke-dasharray="16 14" stroke-linecap="round"/></svg><img class="ph" src="assets/photo/drawing.jpg" alt=""><div class="cray" style="background:#EF4444;color:#EF4444;right:-10px;top:60px"></div><div class="cray" style="background:#22C55E;color:#22C55E;right:22px;top:110px;animation-delay:.5s"></div><div class="cray" style="background:#3B82F6;color:#3B82F6;left:-6px;bottom:30px;animation-delay:1s;transform:rotate(-20deg)"></div></div></section></div>
+
+<div class="opt"><div class="lab"><b>2</b><span>Balloon party</span><small>· course balloons float up, click to pop them</small></div>
+<section class="h k2" id="k2"><div class="in"><h2>Pop into a world<br>of learning! 🎉</h2><p class="sub" style="color:#075985">Click a balloon to discover a class</p><div style="margin-top:24px"><a class="btn" style="background:#FDE047;color:#1E3A8A">Explore courses →</a></div></div></section></div>
+
+<div class="opt"><div class="lab"><b>3</b><span>Toy blocks</span><small>· colourful blocks drop in and spell EUREKA</small></div>
+<section class="h k3"><div class="in"><h2 style="color:#B45309">Building little<br>bright minds 🧸</h2><p class="sub" style="color:#78350F">Phonics, abacus, handwriting, art &amp; tuition — since 2014.</p><div style="margin-top:24px"><a class="btn" style="background:#2563EB;color:#fff">Start building →</a></div></div>
+<div class="blocks"><div class="blk" style="background:#EF4444;animation-delay:.1s">E</div><div class="blk" style="background:#F97316;animation-delay:.25s">U</div><div class="blk" style="background:#EAB308;animation-delay:.4s">R</div><div class="blk" style="background:#22C55E;animation-delay:.55s">E</div><div class="blk" style="background:#3B82F6;animation-delay:.7s">K</div><div class="blk" style="background:#A855F7;animation-delay:.85s">A</div></div></section></div>
+
+<div class="opt"><div class="lab"><b>4</b><span>Rainbow sky</span><small>· sun, drifting clouds, rainbow and a flying kite</small></div>
+<section class="h k4"><div class="sun"></div><div class="rain"></div><div class="cl" style="top:70px"></div><div class="cl" style="top:170px;animation-delay:-14s;transform:scale(.7)"></div>
+<svg class="kite" width="120" height="220" viewBox="0 0 120 220"><path d="M60 0 L110 60 L60 130 L10 60Z" fill="#F43F5E"/><path d="M60 0 L60 130 M10 60 L110 60" stroke="#fff" stroke-width="3"/><path d="M60 130 Q 40 160 70 180 T 50 220" stroke="#1E293B" stroke-width="2" fill="none"/><circle cx="56" cy="160" r="6" fill="#FACC15"/><circle cx="64" cy="190" r="6" fill="#22C55E"/></svg>
+<div class="in"><h2>Let your child's<br>dreams fly high! 🪁</h2><p class="sub">9 fun courses at Eureka Academy, Erode — online &amp; offline.</p><div style="margin-top:24px"><a class="btn" style="background:#fff;color:#0369A1">Fly with us →</a></div></div></section></div>
+
+<div class="opt"><div class="lab"><b>5</b><span>Under the sea</span><small>· fish swim by, bubbles rise, photos in bubbles</small></div>
+<section class="h k5" id="k5"><span class="fish" style="top:20%">🐠</span><span class="fish" style="top:62%;animation-delay:-6s;font-size:36px">🐟</span><span class="fish" style="top:40%;animation-delay:-3s;font-size:56px">🐳</span><div class="weed" style="left:6%"></div><div class="weed" style="left:9%;height:120px;animation-delay:.5s"></div><div class="weed" style="right:8%;height:150px;animation-delay:1s"></div>
+<div class="in"><h2>Dive into<br>learning! 🌊</h2><p class="sub">Explore 9 amazing courses at Eureka Academy.</p><div style="margin-top:24px"><a class="btn" style="background:#FDE047;color:#0E7490">Dive in →</a></div></div>
+<div style="position:relative;height:440px"><div class="pb" style="position:absolute;left:10%;top:6%"><img class="ph" src="assets/photo/abacus.jpg" alt=""></div><div class="pb" style="position:absolute;right:6%;top:24%;width:160px;height:160px;animation-delay:1s"><img class="ph" src="assets/photo/english-phonics.jpg" alt=""></div><div class="pb" style="position:absolute;left:26%;bottom:4%;width:170px;height:170px;animation-delay:2s"><img class="ph" src="assets/photo/western-dance.jpg" alt=""></div></div></section></div>
+
+<div class="opt"><div class="lab"><b>6</b><span>Space adventure</span><small>· twinkling stars, course planets, rocket launch</small></div>
+<section class="h k6" id="k6"><span class="rk">🚀</span>
+<div class="in"><h2>Blast off to<br><em>big learning!</em></h2><p class="sub">Every planet is a course — hover to explore.</p><div style="margin-top:24px"><a class="btn" style="background:#FDE047;color:#1E1B4B">Launch →</a></div></div>
+<div class="pl" style="right:30%;top:12%"><span style="width:90px;height:90px;background:#F97316">💃</span><b>Dance</b></div><div class="pl" style="right:8%;top:20%;animation-delay:1s"><span style="width:70px;height:70px;background:#22C55E">🧮</span><b>Abacus</b></div><div class="pl" style="right:22%;top:52%;animation-delay:2s"><span style="width:110px;height:110px;background:#3B82F6">🔤</span><b>Phonics</b></div><div class="pl" style="right:4%;bottom:10%;animation-delay:.5s"><span style="width:80px;height:80px;background:#EC4899">🎨</span><b>Drawing</b></div><div class="pl" style="right:38%;bottom:6%;animation-delay:1.5s"><span style="width:64px;height:64px;background:#A855F7">अ</span><b>Hindi</b></div></section></div>
+
+<div class="opt"><div class="lab"><b>7</b><span>Jungle friends</span><small>· animals pop up holding course signs</small></div>
+<section class="h k7"><div class="in"><h2>Come play with<br>our jungle friends! 🌴</h2><p class="sub" style="color:#166534">A fun place to learn in Moolapalayam, Erode.</p><div style="margin-top:22px"><a class="btn" style="background:#F97316;color:#fff">Join the fun →</a></div></div>
+<div class="bush"><div class="an"><span class="e">🦁</span><span class="sg">Dance</span></div><div class="an" style="animation-delay:.6s"><span class="e">🐵</span><span class="sg">Abacus</span></div><div class="an" style="animation-delay:1.2s"><span class="e">🐼</span><span class="sg">Phonics</span></div><div class="an" style="animation-delay:1.8s"><span class="e">🦒</span><span class="sg">Drawing</span></div><div class="an" style="animation-delay:2.4s"><span class="e">🐘</span><span class="sg">Hindi</span></div></div><div class="leaf"></div></section></div>
+
+<div class="opt"><div class="lab"><b>8</b><span>Learning train</span><small>· a choo-choo train carries every course across</small></div>
+<section class="h k8"><div class="in"><h2>All aboard the<br>Eureka Express! 🚂</h2><p class="sub" style="color:#9A3412">9 stops of fun learning — hop on anytime.</p><div style="margin-top:22px"><a class="btn" style="background:#DC2626;color:#fff">Get your ticket →</a></div></div>
+<div class="track"></div><div class="train" id="train"></div></section></div>
+
+<div class="opt"><div class="lab"><b>9</b><span>Sticker notebook</span><small>· school notebook with photo stickers</small></div>
+<section class="h k9"><div class="in"><h2>My fun<br>learning book!</h2><p class="sub" style="color:#1E3A8A">Stick around — dance, art, phonics and more at Eureka.</p><div style="margin-top:22px"><a class="btn" style="background:#1E3A8A;color:#fff">Open the book →</a></div></div>
+<div style="position:relative;height:460px"><div class="stk" style="left:6%;top:4%;transform:rotate(-8deg)"><img class="ph" src="assets/photo/drawing.jpg" alt=""><b>Drawing</b></div><div class="stk" style="left:46%;top:0;transform:rotate(7deg);animation-delay:.2s"><img class="ph" src="assets/photo/abacus.jpg" alt=""><b>Abacus</b></div><div class="stk" style="left:22%;top:46%;transform:rotate(5deg);animation-delay:.4s"><img class="ph" src="assets/photo/handwriting.jpg" alt=""><b>Handwriting</b></div><div class="stk" style="left:60%;top:48%;transform:rotate(-6deg);animation-delay:.6s"><img class="ph" src="assets/photo/english-phonics.jpg" alt=""><b>Phonics</b></div>
+<span class="stj" style="left:2%;bottom:6%">⭐</span><span class="stj" style="right:4%;top:36%;animation-delay:.6s">🌈</span><span class="stj" style="left:42%;top:40%;animation-delay:1.2s">❤️</span></div></section></div>
+
+<div class="opt"><div class="lab"><b>10</b><span>Gumball machine</span><small>· turn the knob to get a surprise course!</small></div>
+<section class="h k10"><div class="in"><h2 style="color:#9D174D">What will you<br>learn today? 🍬</h2><p class="sub" style="color:#831843">Turn the yellow knob for a surprise class!</p><div style="margin-top:22px"><a class="btn" style="background:#DB2777;color:#fff">See all courses →</a></div></div>
+<div class="gm"><div class="globe" id="globe"></div><div class="base"><div class="knob" id="knob" title="Turn me!"></div></div><div class="prize" id="prize">👆 Turn the knob!</div></div></section></div>
+<div style="height:40px"></div>
+<script>
+var C=[['western-dance','Dance','#F43F5E'],['zumba','Zumba','#F97316'],['hindi','Hindi','#EAB308'],['spoken-english','English','#22C55E'],['english-phonics','Phonics','#06B6D4'],['handwriting','Writing','#3B82F6'],['abacus','Abacus','#8B5CF6'],['drawing','Drawing','#EC4899'],['tuition','Tuition','#14B8A6']];
+// 2 balloons
+var k2=document.getElementById('k2');C.forEach(function(c,i){var b=document.createElement('div');b.className='bl';b.style.left=(4+i*10.5)+'%';b.style.animationDuration=(9+i%4*2)+'s';b.style.animationDelay=(-i*1.4)+'s';b.innerHTML='<div class="b" style="background:'+c[2]+';color:'+c[2]+'"><span style="color:#fff">'+c[1]+'</span></div><div class="s"></div>';b.onclick=function(e){var r=k2.getBoundingClientRect(),s=document.createElement('span');s.className='boom';s.textContent='POP! '+c[1]+'!';s.style.left=e.clientX-r.left-40+'px';s.style.top=e.clientY-r.top-20+'px';k2.appendChild(s);b.classList.add('popd');setTimeout(function(){s.remove();b.classList.remove('popd')},1500)};k2.appendChild(b)});
+// 5 bubbles
+var k5=document.getElementById('k5');for(var i=0;i<14;i++){var u=document.createElement('span');u.className='bub';var s=10+Math.random()*30;u.style.cssText='width:'+s+'px;height:'+s+'px;left:'+Math.random()*100+'%;animation-duration:'+(5+Math.random()*6)+'s;animation-delay:'+(-Math.random()*8)+'s';k5.appendChild(u)}
+// 6 stars
+var k6=document.getElementById('k6');for(i=0;i<60;i++){var st=document.createElement('span');st.className='star';st.style.cssText='left:'+Math.random()*100+'%;top:'+Math.random()*100+'%;animation-delay:'+Math.random()*2+'s';k6.appendChild(st)}
+// 8 train
+document.getElementById('train').innerHTML='<div class="eng">🚂<span class="smk">☁️</span></div>'+C.map(function(c){return '<div class="car" style="background:'+c[2]+'"><img class="ph" src="assets/photo/'+c[0]+'.jpg" alt=""><b>'+c[1]+'</b></div>'}).join('');
+// 10 gumballs
+var g=document.getElementById('globe');for(i=0;i<22;i++){var d=document.createElement('span');d.className='gb';d.style.cssText='background:'+C[i%9][2]+';left:'+(14+Math.random()*190)+'px;top:'+(80+Math.random()*140)+'px';g.appendChild(d)}
+document.getElementById('knob').onclick=function(){var k=this;k.classList.remove('t');void k.offsetWidth;k.classList.add('t');g.querySelectorAll('.gb').forEach(function(b){b.style.transform='translate('+(Math.random()*30-15)+'px,'+(Math.random()*-30)+'px)'});setTimeout(function(){var c=C[Math.floor(Math.random()*C.length)];document.getElementById('prize').innerHTML='<span>🎉 You got <span style="color:'+c[2]+'">'+c[1]+'</span>!</span>'},600)};
+</script></body></html>
