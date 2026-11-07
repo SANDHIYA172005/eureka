@@ -1470,3 +1470,8 @@ main p,main li{hyphens:none}
 .nf .nf-2 li:nth-child(5n+3) a{--c:#0369A1;--c-bg:#E0F2FE}
 .nf .nf-2 li:nth-child(5n+4) a{--c:#15803D;--c-bg:#DCFCE7}
 .nf .nf-2 li:nth-child(5n+5) a{--c:#6D28D9;--c-bg:#EDE9FE}
+/* courses plain like explore */
+.nf .nf-2{display:grid!important;grid-template-columns:1fr 1fr;gap:6px 20px!important;max-width:none}
+.nf .nf-2 li a{display:inline!important;padding:0!important;background:none!important;color:#292524!important;font-size:13.5px!important;font-weight:400;border-radius:0;box-shadow:none!important;transform:none!important}
+.nf .nf-2 li a::before{display:none}
+.nf .nf-2 li a:hover{color:#EA580C!important;padding-left:4px!important}
