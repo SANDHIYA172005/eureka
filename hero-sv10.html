@@ -1,0 +1,126 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Screen time vs Eureka time — 10 designs</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:Inter,system-ui,sans-serif;background:#EEEBE6;color:#1C1917}a{cursor:pointer;text-decoration:none;color:inherit}
+.top{text-align:center;padding:34px 20px 4px}.top h2{font-size:28px}.top p{color:#78716C;margin-top:6px}
+.opt{max-width:1240px;margin:30px auto;padding:0 20px}.lab{display:flex;align-items:center;gap:10px;font-weight:700;color:#44403C;margin-bottom:10px}.lab b{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#EA580C;color:#fff}.lab small{font-weight:500;color:#78716C}
+.hero{position:relative;overflow:hidden;border-radius:28px;background:#FFFBF5;padding:54px 50px;min-height:560px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+h1{font-size:clamp(30px,4vw,52px);letter-spacing:-.035em;line-height:1.08}h1 s{color:#A8A29E;text-decoration-color:#EF4444;text-decoration-thickness:4px}h1 em{font-style:normal;background:linear-gradient(90deg,#EA580C,#DB2777,#7C3AED);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:#78716C;margin:10px 0 0;font-size:16px}
+.bt{display:flex;gap:12px;justify-content:center;margin-top:28px;flex-wrap:wrap}.bt a{padding:14px 26px;border-radius:999px;font-weight:700;font-size:15px}.b1{background:#EA580C;color:#fff;box-shadow:0 14px 26px -12px #EA580C}.b2{background:#fff;border:2px solid #FED7AA}
+.st{width:100%;max-width:900px;margin-top:30px}
+.ems{font-size:46px;display:flex;gap:14px;justify-content:center}.grey{filter:grayscale(1);opacity:.6}
+/* 1 slider fixed */
+.s1{position:relative;height:300px;border-radius:26px;overflow:hidden;border:6px solid #fff;box-shadow:0 30px 60px -40px rgba(124,58,237,.6);--p:50%}
+.s1 .L,.s1 .R{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}
+.s1 .L{padding-right:50%;background:#E7E5E4;color:#78716C;z-index:1}.s1 .R{padding-left:50%;background:linear-gradient(135deg,#FED7AA,#FBCFE8,#BAE6FD);z-index:2;clip-path:inset(0 0 0 var(--p))}
+.s1 h3{font-size:26px}.s1 .k{position:absolute;top:0;bottom:0;left:var(--p);width:5px;margin-left:-2.5px;background:#fff;z-index:3}.s1 .k::after{content:"⇆";position:absolute;top:50%;left:50%;width:56px;height:56px;margin:-28px;border-radius:50%;background:#EA580C;color:#fff;display:grid;place-items:center;font-size:22px}
+.s1 input{position:absolute;inset:0;width:100%;opacity:0;z-index:4;cursor:ew-resize}
+/* 2 toggle */
+.h2w{transition:background .6s}.h2w.on{background:linear-gradient(135deg,#FFEDD5,#FCE7F3,#E0F2FE)}
+.sw{display:inline-flex;align-items:center;gap:14px;font-weight:800;font-size:18px;margin-top:26px;cursor:pointer}.sw .tg{width:96px;height:52px;border-radius:999px;background:#D6D3D1;position:relative;transition:.4s}.sw .tg::after{content:"📱";position:absolute;left:6px;top:6px;width:40px;height:40px;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:20px;transition:.4s}
+.on .sw .tg{background:linear-gradient(90deg,#EA580C,#DB2777)}.on .sw .tg::after{content:"🎨";left:50px}.sw span{color:#A8A29E;transition:.4s}.on .sw .r,.sw .l{color:#1C1917}.on .sw .l{color:#A8A29E}
+.scene{margin-top:26px;height:180px;position:relative;width:100%;max-width:700px}.scene>div{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;transition:.5s}
+.scene .a{opacity:1}.scene .b{opacity:0;transform:scale(.8)}.on .scene .a{opacity:0;transform:scale(.8)}.on .scene .b{opacity:1;transform:none}.scene h3{font-size:22px}
+/* 3 two cards */
+.cards{display:flex;align-items:center;justify-content:center;gap:30px;margin-top:34px}.cd{width:300px;padding:30px;border-radius:28px;text-align:center}.cd h3{font-size:22px;margin:12px 0 6px}.cd p{font-size:14px}
+.cd.x{background:#F5F5F4;color:#A8A29E;transform:rotate(-4deg);position:relative}.cd.x::after{content:"✕";position:absolute;top:-16px;right:-16px;width:44px;height:44px;border-radius:50%;background:#EF4444;color:#fff;display:grid;place-items:center;font-weight:800}
+.cd.v{background:linear-gradient(135deg,#FFEDD5,#FCE7F3);transform:rotate(3deg) scale(1.06);box-shadow:0 30px 50px -30px #DB2777;position:relative;animation:bb 3s ease-in-out infinite}.cd.v::after{content:"✓";position:absolute;top:-16px;right:-16px;width:44px;height:44px;border-radius:50%;background:#16A34A;color:#fff;display:grid;place-items:center;font-weight:800}
+.arr{font-size:46px;color:#EA580C;animation:ar 1.2s ease-in-out infinite}@keyframes ar{50%{transform:translateX(10px)}}@keyframes bb{50%{transform:rotate(3deg) scale(1.06) translateY(-8px)}}
+/* 4 phone bursts */
+.u4{flex-direction:row;gap:50px;text-align:left}.u4 .tx{flex:1}.u4 .bt{justify-content:flex-start}
+.phone{position:relative;width:220px;height:400px;border-radius:36px;background:#1C1917;padding:10px;flex:none}.scr{width:100%;height:100%;border-radius:28px;background:#44403C;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:30px 16px;align-content:start;animation:off 6s infinite}
+.scr i{aspect-ratio:1;border-radius:12px;background:#57534E}@keyframes off{0%,30%{opacity:1}40%,90%{opacity:.15}100%{opacity:1}}
+.pop{position:absolute;left:50%;top:50%;font-size:38px;opacity:0;animation:burst 6s infinite}@keyframes burst{0%,35%{opacity:0;transform:translate(-50%,-50%) scale(.2)}45%,88%{opacity:1;transform:translate(calc(-50% + var(--x)),calc(-50% + var(--y))) scale(1)}100%{opacity:0;transform:translate(-50%,-50%) scale(.2)}}
+.ptx{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);color:#fff;font-weight:800;font-size:15px;text-align:center;opacity:0;animation:pt 6s infinite}@keyframes pt{0%,40%{opacity:0}48%,88%{opacity:1}100%{opacity:0}}
+/* 5 timeline */
+.tl{width:100%;max-width:820px;margin-top:30px;display:grid;gap:16px;text-align:left}.row{display:grid;grid-template-columns:150px 1fr;align-items:center;gap:16px}.row b{font-size:15px}.row small{display:block;color:#A8A29E;font-weight:500}
+.trk{height:64px;border-radius:18px;background:#F5F5F4;display:flex;gap:6px;padding:6px;overflow:hidden}.trk span{flex:1;border-radius:12px;display:grid;place-items:center;font-size:24px;transform:scaleY(0);transform-origin:bottom;animation:gro .5s forwards}
+.r1 span{background:#D6D3D1;filter:grayscale(1)}.r2 span{background:var(--c)}@keyframes gro{to{transform:none}}
+.hrs{display:grid;grid-template-columns:150px 1fr;gap:16px;font-size:12px;color:#A8A29E}.hrs div{display:flex;justify-content:space-between}
+/* 6 flip */
+.flip{width:520px;max-width:100%;height:280px;perspective:1000px;margin-top:30px}.fi{position:relative;width:100%;height:100%;transform-style:preserve-3d;animation:fl 7s ease-in-out infinite}
+.fi>div{position:absolute;inset:0;border-radius:28px;backface-visibility:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}.fi .f{background:#E7E5E4;color:#78716C}.fi .k2{background:linear-gradient(135deg,#FED7AA,#FBCFE8,#BAE6FD);transform:rotateY(180deg)}.fi h3{font-size:26px}
+@keyframes fl{0%,35%{transform:none}50%,85%{transform:rotateY(180deg)}100%{transform:rotateY(360deg)}}
+/* 7 TV channel */
+.tv{position:relative;width:520px;max-width:100%;margin-top:30px;background:#F59E0B;border-radius:34px;padding:20px 80px 20px 20px;box-shadow:0 30px 50px -30px #B45309}.tvs{height:260px;border-radius:22px;overflow:hidden;position:relative;background:#111}
+.ch{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;opacity:0;animation:chn 12s infinite;font-weight:800;font-size:20px}.ch i{font-style:normal;font-size:70px}
+.ch.c0{background:repeating-linear-gradient(0deg,#555 0 2px,#888 2px 4px);color:#eee;animation-delay:0s}.ch.c1{background:#FFEDD5;animation-delay:3s}.ch.c2{background:#FCE7F3;animation-delay:6s}.ch.c3{background:#DCFCE7;animation-delay:9s}
+@keyframes chn{0%{opacity:0}2%,23%{opacity:1}25%,100%{opacity:0}}.knobs{position:absolute;right:20px;top:30px;display:grid;gap:16px}.knobs i{width:40px;height:40px;border-radius:50%;background:#78350F;border:5px solid #FDE68A}.knobs i:first-child{animation:rot 3s steps(4) infinite}@keyframes rot{to{transform:rotate(360deg)}}
+.tv::after{content:"";position:absolute;left:30%;bottom:-30px;width:40%;height:30px;background:linear-gradient(#D97706,transparent);clip-path:polygon(10% 0,90% 0,100% 100%,0 100%)}
+/* 8 scratch */
+.scw{position:relative;width:560px;max-width:100%;height:280px;margin-top:30px;border-radius:28px;overflow:hidden;box-shadow:0 30px 50px -30px #DB2777}.scw .under{position:absolute;inset:0;background:linear-gradient(135deg,#FED7AA,#FBCFE8,#BAE6FD);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}.scw h3{font-size:26px}
+.scw canvas{position:absolute;inset:0;width:100%;height:100%;cursor:grab;touch-action:none}
+/* 9 curtain */
+.cur{position:relative;width:640px;max-width:100%;height:290px;margin-top:30px;border-radius:28px;overflow:hidden}.cur .bk{position:absolute;inset:0;background:linear-gradient(135deg,#FED7AA,#FBCFE8,#BAE6FD);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}.cur h3{font-size:26px}
+.cur .fr{position:absolute;inset:0;background:#E7E5E4;color:#78716C;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;animation:wipe 7s ease-in-out infinite}@keyframes wipe{0%,30%{clip-path:inset(0 0 0 0)}50%,85%{clip-path:inset(0 0 100% 0)}100%{clip-path:inset(0 0 0 0)}}
+.cur .fr::after{content:"";position:absolute;left:0;right:0;bottom:0;height:8px;background:linear-gradient(90deg,#EA580C,#DB2777,#7C3AED)}
+/* 10 meters */
+.mt{display:grid;grid-template-columns:1fr 1fr;gap:26px;width:100%;max-width:820px;margin-top:30px}.mtr{border-radius:26px;padding:24px;text-align:left}.mtr h3{font-size:18px;margin-bottom:4px}.mtr p{font-size:13.5px;color:#78716C;margin-bottom:16px}
+.m1{background:#F5F5F4}.m2{background:linear-gradient(135deg,#FFEDD5,#FCE7F3)}.bat{position:relative;height:56px;border-radius:14px;border:4px solid #A8A29E;padding:4px}.bat::after{content:"";position:absolute;right:-12px;top:14px;width:8px;height:20px;border-radius:0 4px 4px 0;background:#A8A29E}
+.lv{height:100%;border-radius:8px;display:flex;align-items:center;justify-content:flex-end;padding-right:10px;font-weight:800;color:#fff}.m1 .lv{background:#A8A29E;animation:drain 6s ease-in-out infinite}.m2 .bat{border-color:#EA580C}.m2 .bat::after{background:#EA580C}.m2 .lv{background:linear-gradient(90deg,#FDBA74,#EA580C,#DB2777);animation:charge 6s ease-in-out infinite}
+@keyframes drain{0%{width:90%}60%,100%{width:12%}}@keyframes charge{0%{width:10%}60%,100%{width:100%}}.mtr .ems{justify-content:flex-start;font-size:30px;margin-top:14px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+@media(max-width:760px){.hero{padding:34px 18px}.cards{flex-direction:column}.u4{flex-direction:column;text-align:center}.u4 .bt{justify-content:center}.mt{grid-template-columns:1fr}.row,.hrs{grid-template-columns:90px 1fr}}
+</style></head><body>
+<div class="top"><h2>Screen time vs Eureka time — 10 designs</h2><p>Same idea, 10 different ways. Tell me the number.</p></div>
+
+<section class="opt"><div class="lab"><b>1</b>Clean drag slider <small>· fixed and simplified</small></div><div class="hero">
+<h1>Swap <s>screen time</s> for <em>Eureka time</em></h1><p class="sub">9 fun courses for kids in Moolapalayam, Erode · since 2014</p>
+<div class="st s1" id="s1"><div class="L"><div class="ems">📱📺🎮</div><h3>Hours on screens</h3></div><div class="R"><div class="ems">💃🎨🧮</div><h3>Evenings full of joy</h3></div><div class="k"></div><input type="range" value="50" aria-label="compare"></div>
+<div class="bt"><a class="b1">📞 Call 99650 32227</a><a class="b2">📍 Visit us</a></div></div></section>
+
+<section class="opt"><div class="lab"><b>2</b>Magic switch <small>· the switch flips and the whole hero lights up</small></div><div class="hero h2w" id="h2">
+<h1>One switch changes <em>everything</em></h1><p class="sub">Tap the switch 👇</p>
+<div class="sw" id="sw"><span class="l">Screen time</span><div class="tg"></div><span class="r">Eureka time</span></div>
+<div class="scene"><div class="a"><div class="ems grey">📱📺🎮</div><h3>Bored · tired · alone</h3></div><div class="b"><div class="ems">💃🎨🧮🎤</div><h3>Dancing · drawing · shining</h3></div></div>
+<div class="bt"><a class="b1">📞 Call 99650 32227</a><a class="b2">📍 Visit us</a></div></div></section>
+
+<section class="opt"><div class="lab"><b>3</b>✕ vs ✓ cards <small>· clear choice for parents</small></div><div class="hero">
+<h1>Which evening will your child <em>remember?</em></h1>
+<div class="cards"><div class="cd x"><div class="ems grey">📱📺</div><h3>Screen time</h3><p>Hours scrolling alone</p></div><div class="arr">➜</div><div class="cd v"><div class="ems">💃🎨🧮</div><h3>Eureka time</h3><p>Skills, friends &amp; confidence</p></div></div>
+<div class="bt"><a class="b1">📞 Call 99650 32227</a><a class="b2">📍 Visit us</a></div></div></section>
+
+<section class="opt"><div class="lab"><b>4</b>Phone switches off, talents pop out</div><div class="hero u4">
+<div class="tx"><h1>Put the phone down.<br>Pick up a <em>talent.</em></h1><p class="sub">Dance, drawing, abacus, phonics &amp; more in Moolapalayam, Erode.</p><div class="bt"><a class="b1">📞 Call 99650 32227</a><a class="b2">📍 Visit us</a></div></div>
+<div class="phone"><div class="scr"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="ptx">Time for<br>Eureka! ✨</div>
+<span class="pop" style="--x:-150px;--y:-140px">💃</span><span class="pop" style="--x:150px;--y:-150px">🎨</span><span class="pop" style="--x:-170px;--y:30px">🧮</span><span class="pop" style="--x:170px;--y:20px">🔤</span><span class="pop" style="--x:-130px;--y:170px">✍️</span><span class="pop" style="--x:140px;--y:170px">🎤</span></div></div></section>
+
+<section class="opt"><div class="lab"><b>5</b>Evening timeline <small>· 5 to 8 pm, two ways</small></div><div class="hero">
+<h1>Same 3 hours. <em>Different child.</em></h1>
+<div class="tl"><div class="row r1"><b>Screen time<small>Every evening</small></b><div class="trk"><span style="animation-delay:.2s">📱</span><span style="animation-delay:.4s">📺</span><span style="animation-delay:.6s">🎮</span><span style="animation-delay:.8s">📱</span><span style="animation-delay:1s">📺</span><span style="animation-delay:1.2s">📱</span></div></div>
+<div class="row r2"><b>Eureka time<small>Mon–Sat</small></b><div class="trk"><span style="--c:#FFEDD5;animation-delay:1.6s">💃</span><span style="--c:#FCE7F3;animation-delay:1.8s">🎨</span><span style="--c:#DCFCE7;animation-delay:2s">🧮</span><span style="--c:#E0F2FE;animation-delay:2.2s">💬</span><span style="--c:#F3E8FF;animation-delay:2.4s">🔤</span><span style="--c:#FEF3C7;animation-delay:2.6s">🤝</span></div></div>
+<div class="hrs"><span></span><div><span>5 pm</span><span>6 pm</span><span>7 pm</span><span>8 pm</span></div></div></div>
+<div class="bt"><a class="b1">📞 Call 99650 32227</a><a class="b2">📍 Visit us</a></div></div></section>
+
+<section class="opt"><div class="lab"><b>6</b>Flip card <small>· turns from screen side to Eureka side</small></div><div class="hero">
+<h1>Turn screen time into <em>Eureka time</em></h1>
+<div class="flip"><div class="fi"><div class="f"><div class="ems">📱📺🎮</div><h3>Screen time</h3><p>Bored · tired · alone</p></div><div class="k2"><div class="ems">💃🎨🧮</div><h3>Eureka time</h3><p>Learning · laughing · shining</p></div></div></div>
+<div class="bt"><a class="b1">📞 Call 99650 32227</a><a class="b2">📍 Visit us</a></div></div></section>
+
+<section class="opt"><div class="lab"><b>7</b>Change the channel <small>· an old TV flips from static to courses</small></div><div class="hero">
+<h1>Time to <em>change the channel</em></h1>
+<div class="tv"><div class="tvs"><div class="ch c0"><i>📺</i>Nothing to watch…</div><div class="ch c1"><i>💃</i>Dance channel</div><div class="ch c2"><i>🎨</i>Drawing channel</div><div class="ch c3"><i>🧮</i>Abacus channel</div></div><div class="knobs"><i></i><i></i></div></div>
+<div class="bt" style="margin-top:46px"><a class="b1">📞 Call 99650 32227</a><a class="b2">📍 Visit us</a></div></div></section>
+
+<section class="opt"><div class="lab"><b>8</b>Scratch card <small>· scratch the grey screen to reveal the fun</small></div><div class="hero">
+<h1>Scratch off the <em>screen time</em></h1><p class="sub">Use your mouse or finger 👇</p>
+<div class="scw"><div class="under"><div class="ems">💃🎨🧮🎤</div><h3>Hello, Eureka time! 🎉</h3><p>9 fun courses · Moolapalayam, Erode</p></div><canvas id="sc"></canvas></div>
+<div class="bt"><a class="b1">📞 Call 99650 32227</a><a class="b2">📍 Visit us</a></div></div></section>
+
+<section class="opt"><div class="lab"><b>9</b>Rising curtain <small>· the grey screen rolls up to reveal joy</small></div><div class="hero">
+<h1>Lift the screen. <em>Let them shine.</em></h1>
+<div class="cur"><div class="bk"><div class="ems">💃🎨🧮</div><h3>Evenings full of joy</h3></div><div class="fr"><div class="ems">📱📺🎮</div><h3>Hours on screens</h3></div></div>
+<div class="bt"><a class="b1">📞 Call 99650 32227</a><a class="b2">📍 Visit us</a></div></div></section>
+
+<section class="opt"><div class="lab"><b>10</b>Battery meters <small>· screen battery drains, joy meter fills</small></div><div class="hero">
+<h1>Recharge your child with <em>Eureka time</em></h1>
+<div class="mt"><div class="mtr m1"><h3>📱 Screen time</h3><p>Energy and focus going down</p><div class="bat"><div class="lv"></div></div><div class="ems grey">📱📺🎮</div></div>
+<div class="mtr m2"><h3>✨ Eureka time</h3><p>Confidence and joy going up</p><div class="bat"><div class="lv">FULL</div></div><div class="ems">💃🎨🧮</div></div></div>
+<div class="bt"><a class="b1">📞 Call 99650 32227</a><a class="b2">📍 Visit us</a></div></div></section>
+
+<script>
+var s1=document.getElementById('s1');s1.querySelector('input').oninput=function(e){s1.style.setProperty('--p',e.target.value+'%')};
+var h2=document.getElementById('h2'),t2=setInterval(function(){h2.classList.toggle('on')},2600);document.getElementById('sw').onclick=function(){clearInterval(t2);h2.classList.toggle('on')};
+var c=document.getElementById('sc'),x=c.getContext('2d');function draw(){var r=c.getBoundingClientRect();c.width=r.width;c.height=r.height;x.fillStyle='#D6D3D1';x.fillRect(0,0,c.width,c.height);x.fillStyle='#78716C';x.font='700 46px sans-serif';x.textAlign='center';x.fillText('📱 📺 🎮',c.width/2,c.height/2-10);x.font='700 22px Inter,sans-serif';x.fillText('Scratch here ✨',c.width/2,c.height/2+40);x.globalCompositeOperation='destination-out'}draw();
+var dn=false;function sc(e){if(!dn)return;var r=c.getBoundingClientRect();x.beginPath();x.arc(e.clientX-r.left,e.clientY-r.top,34,0,7);x.fill()}c.onpointerdown=function(e){dn=true;sc(e)};c.onpointermove=sc;window.addEventListener('pointerup',function(){dn=false});
+</script></body></html>
