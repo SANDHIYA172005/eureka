@@ -1476,3 +1476,11 @@ main p,main li{hyphens:none}
 .nf .nf-2 li a::before{display:none}
 .nf .nf-2 li a:hover{color:#EA580C!important;padding-left:4px!important}
 .nf{padding-top:28px!important}
+/* footer simple elegant */
+.nf h4{background:none!important;padding:0!important;color:#9A3412!important;font-size:12px!important;letter-spacing:.12em}
+.nf-c li{display:flex;gap:10px;align-items:flex-start;line-height:1.55!important}
+.nf-c li i{flex:none;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#fff;color:#EA580C;box-shadow:0 2px 6px -2px rgba(234,88,12,.35)}
+.nf-c li a,.nf-c li span{padding-top:5px;color:#44403C}
+.nf-c{gap:12px!important}
+.nf-btn{margin-top:14px!important}
+.nf-wave .w1{opacity:.35}.nf-wave .w2{opacity:.5}
