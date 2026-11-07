@@ -1601,3 +1601,8 @@ main p,main li{hyphens:none}
 @media(max-width:1000px){.tq-g{grid-template-columns:1fr 1fr}.tq-f{grid-template-columns:1fr;padding:36px 26px;gap:34px;text-align:center}.tq-f-r{text-align:center!important}.tq-chips,.tq-aw{justify-content:center}}
 @media(max-width:560px){.tq{padding:64px 0}.tq-g{gap:14px}.tq-c{padding:22px 12px}.tq-ph{width:110px;height:110px}.tq-c h3{font-size:16px}.tq-f-ph{width:240px;height:280px}.tq-since{left:-10px}}
 .tq .tq-k{color:#EA580C!important}.tq-f-ph img{background:#FFF7ED;box-shadow:0 20px 40px -20px rgba(0,0,0,.35)}
+/* nav: no dot, clean mega menu */
+.nav a[aria-current=page]::after,.nav a::after{display:none!important;content:none!important}
+.hd::after{z-index:0}
+.mg{top:calc(100% + 14px)!important;z-index:60!important}
+.mg::before{content:"";position:absolute;left:0;right:0;top:-24px;height:24px}
