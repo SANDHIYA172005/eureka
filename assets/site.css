@@ -1460,3 +1460,13 @@ main p,main li{hyphens:none}
 .nf-bot{margin-top:26px!important;padding-top:12px!important;padding-bottom:14px!important;font-size:12px!important}
 .nf-wave{top:-70px!important;height:72px!important}.nf{margin-top:72px!important}
 @media(max-width:600px){.nf-g{gap:22px!important}.nf-g>div:nth-child(2),.nf-g>div:nth-child(3){grid-column:auto}.nf-g>div:nth-child(3){grid-column:1/-1}}
+/* course chips v2 */
+.nf .nf-2{display:flex!important;flex-wrap:wrap;gap:8px!important;max-width:340px}
+.nf .nf-2 li a{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;padding:6px 13px!important;font-size:13px!important;font-weight:500;border-radius:999px;border:0;background:var(--c-bg,#FFEDD5);color:var(--c,#C2410C)!important;transition:transform .2s,box-shadow .2s}
+.nf .nf-2 li a::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;opacity:.8}
+.nf .nf-2 li a:hover{transform:translateY(-2px);box-shadow:0 6px 14px -6px var(--c,#C2410C);padding-left:13px!important}
+.nf .nf-2 li:nth-child(5n+1) a{--c:#C2410C;--c-bg:#FFEDD5}
+.nf .nf-2 li:nth-child(5n+2) a{--c:#BE185D;--c-bg:#FCE7F3}
+.nf .nf-2 li:nth-child(5n+3) a{--c:#0369A1;--c-bg:#E0F2FE}
+.nf .nf-2 li:nth-child(5n+4) a{--c:#15803D;--c-bg:#DCFCE7}
+.nf .nf-2 li:nth-child(5n+5) a{--c:#6D28D9;--c-bg:#EDE9FE}
