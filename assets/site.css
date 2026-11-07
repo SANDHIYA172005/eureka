@@ -1569,3 +1569,35 @@ main p,main li{hyphens:none}
 .nav>li>a:hover{color:#C2410C}
 .hd-r .btn-dark{background:#EA580C!important;border-color:#EA580C!important;color:#fff!important}
 .hq-yr{top:auto!important;bottom:-60px;right:-10px}
+/* ===== team v2 (tq) ===== */
+.tq{padding:96px 0;background:linear-gradient(180deg,#FFFBF3,#fff)}
+.tq-h{text-align:center;max-width:620px;margin:0 auto 48px}.tq-h h2{font-size:clamp(28px,3.4vw,44px);letter-spacing:-.02em;line-height:1.12;margin:0 0 12px}.tq-h p{color:#57534E;font-size:17px;text-align:center!important}
+.tq-k{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#EA580C;margin-bottom:12px}
+.tq-f{display:grid;grid-template-columns:340px 1fr;gap:56px;align-items:center;background:#fff;border-radius:36px;padding:44px 56px;box-shadow:0 30px 60px -40px rgba(194,65,12,.45);border:1px solid #FFEDD5;margin-bottom:56px}
+.tq-f-ph{position:relative;width:300px;height:340px;margin:auto}
+.tq-ring{position:absolute;inset:18px -14px -14px 18px;border-radius:160px 160px 28px 28px;background:linear-gradient(135deg,#FDBA74,#F472B6)}
+.tq-f-ph img{position:relative;width:100%;height:100%;object-fit:cover;object-position:top;border-radius:160px 160px 28px 28px;border:6px solid #fff}
+.tq-since{position:absolute;left:-26px;bottom:26px;background:#fff;border-radius:18px;padding:10px 16px;box-shadow:0 14px 28px -14px rgba(0,0,0,.35);font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:#78716C;line-height:1.2}
+.tq-since b{display:block;font-size:26px;color:#EA580C;letter-spacing:-.02em}
+.tq-tag{display:inline-block;background:#FFEDD5;color:#C2410C;font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px;border-radius:999px}
+.tq-f-tx h3{font-size:clamp(26px,3vw,38px);letter-spacing:-.02em;margin:14px 0 6px}
+.tq-f-r{font-size:17px;color:#C2410C;font-weight:600;text-align:left!important}
+.tq-chips{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px;margin:22px 0}
+.tq-chips li{background:#F5F5F4;padding:7px 14px;border-radius:999px;font-size:14px;color:#292524;font-weight:500}.tq-chips em{font-style:normal;color:#C2410C}
+.tq-aw{display:flex;gap:12px;flex-wrap:wrap}.tq-aw div{display:flex;align-items:center;gap:10px;background:linear-gradient(135deg,#FEF3C7,#FFEDD5);border:1px solid #FDE68A;padding:12px 18px;border-radius:16px}
+.tq-aw span{font-size:22px}.tq-aw b{font-size:15px;color:#78350F}
+.tq-g{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.tq-c{text-align:center;background:#fff;border-radius:28px;padding:30px 20px 26px;border:1px solid #F5F5F4;transition:transform .3s,box-shadow .3s}
+.tq-c:hover{transform:translateY(-6px);box-shadow:0 24px 40px -26px var(--c)}
+.tq-ph{position:relative;width:150px;height:150px;margin:0 auto 20px}
+.tq-bl{position:absolute;inset:-8px;border-radius:44% 56% 52% 48%/50% 44% 56% 50%;background:var(--l);transition:transform .6s}
+.tq-c:hover .tq-bl{transform:rotate(25deg) scale(1.05)}
+.tq-ph img{position:relative;width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:top;border:5px solid #fff;box-shadow:0 0 0 3px var(--c)}
+.tq-c h3{font-size:19px;margin:0 0 6px}
+.tq-r{font-weight:700;color:var(--c);font-size:14.5px;text-align:center!important}
+.tq-r2{font-size:13.5px;color:#78716C;margin-top:2px;text-align:center!important}
+.tq-q{display:inline-block;margin-top:14px;background:var(--l);padding:6px 12px;border-radius:999px;font-size:13px;color:#292524}
+.tq-s{font-size:12.5px;color:#A8A29E;margin-top:10px;text-align:center!important}
+@media(max-width:1000px){.tq-g{grid-template-columns:1fr 1fr}.tq-f{grid-template-columns:1fr;padding:36px 26px;gap:34px;text-align:center}.tq-f-r{text-align:center!important}.tq-chips,.tq-aw{justify-content:center}}
+@media(max-width:560px){.tq{padding:64px 0}.tq-g{gap:14px}.tq-c{padding:22px 12px}.tq-ph{width:110px;height:110px}.tq-c h3{font-size:16px}.tq-f-ph{width:240px;height:280px}.tq-since{left:-10px}}
+.tq .tq-k{color:#EA580C!important}.tq-f-ph img{background:#FFF7ED;box-shadow:0 20px 40px -20px rgba(0,0,0,.35)}
