@@ -1,0 +1,169 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>10 unique hero concepts — Eureka Academy</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:Inter,system-ui,sans-serif;background:#EEEBE6;color:#1C1917}a{cursor:pointer;text-decoration:none;color:inherit}
+.top{text-align:center;padding:36px 20px 6px}.top h2{font-size:28px}.top p{color:#78716C;margin-top:6px}
+.opt{max-width:1280px;margin:30px auto;padding:0 20px}.lab{display:flex;align-items:center;gap:10px;font-weight:700;color:#44403C;margin-bottom:10px}.lab b{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#EA580C;color:#fff}.lab small{font-weight:500;color:#78716C}
+.hero{position:relative;overflow:hidden;border-radius:28px;min-height:580px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:700;font-size:15px;transition:transform .2s}.btn:hover{transform:translateY(-3px)}
+.or{background:#EA580C;color:#fff;box-shadow:0 14px 26px -12px #EA580C}.wh{background:#fff;color:#1C1917;border:2px solid #FED7AA}
+.hw{font-family:"Segoe Print","Comic Sans MS",cursive}
+/* 1 EUREKA tiles */
+.u1{background:#FFFBF3;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 20px}
+.tiles{display:flex;gap:clamp(6px,1.2vw,16px);perspective:800px}.tl{width:clamp(56px,10vw,130px);aspect-ratio:1;position:relative;transform-style:preserve-3d;animation:tf 8s ease-in-out infinite;animation-delay:calc(var(--i)*.25s)}
+.tl b,.tl i{position:absolute;inset:0;border-radius:22%;display:grid;place-items:center;backface-visibility:hidden;font-weight:900;font-size:clamp(34px,7vw,92px);box-shadow:0 18px 30px -18px rgba(0,0,0,.35)}
+.tl b{background:var(--c);color:#fff}.tl i{background:#fff;font-style:normal;font-size:clamp(28px,5vw,64px);transform:rotateY(180deg);border:4px solid var(--c)}
+@keyframes tf{0%,40%{transform:none}50%,90%{transform:rotateY(180deg)}100%{transform:rotateY(360deg)}}
+.u1 h1{font-size:clamp(26px,3.6vw,46px);margin:34px 0 10px;letter-spacing:-.02em}.u1 p{color:#57534E;font-size:17px;max-width:620px}.u1 .row{display:flex;gap:12px;margin-top:26px;justify-content:center;flex-wrap:wrap}
+/* 2 age picker */
+.u2{background:linear-gradient(135deg,#F0F9FF,#FDF2F8);display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:56px 60px}
+.u2 h1{font-size:clamp(32px,4vw,52px);letter-spacing:-.03em;line-height:1.08}.u2 h1 span{color:#0284C7}.u2 p.s{color:#57534E;font-size:17px;margin:14px 0 24px}
+.ages{display:flex;gap:10px;flex-wrap:wrap}.ages button{border:0;cursor:pointer;font:700 15px Inter,sans-serif;padding:14px 20px;border-radius:18px;background:#fff;color:#0C4A6E;box-shadow:0 8px 18px -12px rgba(0,0,0,.3);transition:.2s}.ages button small{display:block;font-weight:500;font-size:11.5px;color:#64748B}
+.ages button.on{background:#0284C7;color:#fff;transform:translateY(-4px)}.ages button.on small{color:#E0F2FE}
+.rec{background:#fff;border-radius:30px;padding:30px;box-shadow:0 30px 60px -36px rgba(2,132,199,.6)}.rec h3{font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:#0284C7;margin-bottom:16px}
+.rl{display:grid;gap:10px}.ri{display:flex;align-items:center;gap:14px;padding:14px;border-radius:18px;background:#F8FAFC;animation:ri .45s both}.ri span{font-size:30px;width:52px;height:52px;display:grid;place-items:center;border-radius:14px;background:var(--c)}.ri b{display:block}.ri small{color:#64748B}
+@keyframes ri{from{opacity:0;transform:translateX(30px)}}
+.rec .btn{margin-top:18px;width:100%;justify-content:center}
+/* 3 spotlight reveal */
+.u3{background:#FFF7ED;display:grid;place-items:center;text-align:center;cursor:none}
+.u3 .doo{position:absolute;inset:0;font-size:46px;-webkit-mask:radial-gradient(circle 150px at var(--mx,50%) var(--my,50%),#000 60%,transparent 100%);mask:radial-gradient(circle 150px at var(--mx,50%) var(--my,50%),#000 60%,transparent 100%);background:linear-gradient(135deg,#FDE68A,#F9A8D4,#A5F3FC)}
+.u3 .doo span{position:absolute}.u3 .ct{position:relative;z-index:2;pointer-events:none}.u3 .ct a{pointer-events:auto}
+.u3 h1{font-size:clamp(34px,5vw,66px);letter-spacing:-.03em;line-height:1.05}.u3 p{color:#78716C;margin:14px 0 24px;font-size:17px}.u3 .hint{position:absolute;bottom:22px;left:0;right:0;font-size:13px;color:#A8A29E}
+/* 4 timetable clock */
+.u4{background:#FFFBEB;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px;padding:56px 60px}
+.clk{position:relative;width:min(420px,80vw);aspect-ratio:1;margin:auto;border-radius:50%;background:#fff;box-shadow:0 40px 70px -40px rgba(180,83,9,.6),inset 0 0 0 14px #FDE68A}
+.clk svg{position:absolute;inset:0}.arc{fill:none;stroke-linecap:round}
+.hand{position:absolute;left:50%;bottom:50%;transform-origin:50% 100%;border-radius:6px}.hh{width:10px;height:28%;margin-left:-5px;background:#1C1917;animation:rot 24s linear infinite}.mh{width:6px;height:38%;margin-left:-3px;background:#EA580C;animation:rot 3s linear infinite}
+@keyframes rot{to{transform:rotate(360deg)}}.ctr{position:absolute;left:50%;top:50%;width:22px;height:22px;margin:-11px;border-radius:50%;background:#EA580C;border:4px solid #fff}
+.clk .lb{position:absolute;font-weight:800;font-size:13px;background:#fff;padding:5px 10px;border-radius:999px;box-shadow:0 6px 14px -8px rgba(0,0,0,.3)}
+.u4 h1{font-size:clamp(32px,4.2vw,56px);letter-spacing:-.03em;line-height:1.05}.u4 h1 em{font-style:normal;color:#EA580C}.u4 p{color:#57534E;font-size:17px;margin:16px 0 22px;max-width:460px}
+.slot{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px}.slot span{background:#fff;border:2px solid #FDE68A;padding:8px 14px;border-radius:14px;font-weight:700;font-size:14px}
+/* 5 report card */
+.u5{background:linear-gradient(135deg,#ECFDF5,#FEFCE8);display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:56px 60px}
+.u5 h1{font-size:clamp(32px,4.2vw,54px);letter-spacing:-.03em;line-height:1.06}.u5 h1 em{font-style:normal;color:#16A34A}.u5 p{color:#57534E;font-size:17px;margin:16px 0 24px}
+.rc{position:relative;background:#fff;border-radius:22px;padding:28px 30px;box-shadow:0 30px 60px -36px rgba(21,128,61,.6);border-top:10px solid #16A34A;transform:rotate(2deg)}
+.rc h3{display:flex;justify-content:space-between;font-size:15px;color:#166534;margin-bottom:6px}.rc .nm{font-size:13px;color:#78716C;margin-bottom:18px;border-bottom:2px dashed #E7E5E4;padding-bottom:12px}
+.gr{display:grid;grid-template-columns:120px 1fr 44px;align-items:center;gap:12px;margin:12px 0;font-weight:600;font-size:14px}.bar{height:12px;border-radius:999px;background:#F0FDF4;overflow:hidden}.bar i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#86EFAC,#16A34A);animation:fill 1.4s ease forwards;animation-delay:var(--d)}
+@keyframes fill{to{width:var(--w)}}.gr b{color:#16A34A;font-size:18px;opacity:0;animation:fade .3s forwards;animation-delay:calc(var(--d) + 1.2s)}@keyframes fade{to{opacity:1}}
+.stamp{position:absolute;right:20px;bottom:18px;border:4px solid #DC2626;color:#DC2626;font-weight:900;padding:8px 14px;border-radius:12px;transform:rotate(-14deg) scale(3);opacity:0;animation:stamp .4s 4.4s cubic-bezier(.3,1.4,.6,1) forwards;text-align:center;line-height:1.1;font-size:15px}
+@keyframes stamp{to{opacity:.9;transform:rotate(-14deg) scale(1)}}
+/* 6 kinetic words */
+.u6{display:grid;place-items:center;text-align:center;animation:bg 10s infinite;padding:40px}
+@keyframes bg{0%,18%{background:#FFEDD5}20%,38%{background:#FCE7F3}40%,58%{background:#E0F2FE}60%,78%{background:#DCFCE7}80%,98%{background:#EDE9FE}100%{background:#FFEDD5}}
+.kw{position:relative;height:clamp(90px,15vw,190px);width:100%}.kw span{position:absolute;inset:0;font-size:clamp(80px,15vw,200px);font-weight:900;letter-spacing:-.05em;line-height:1;opacity:0;animation:kw 10s infinite}
+.kw span:nth-child(1){color:#EA580C}.kw span:nth-child(2){color:#DB2777;animation-delay:2s}.kw span:nth-child(3){color:#0284C7;animation-delay:4s}.kw span:nth-child(4){color:#16A34A;animation-delay:6s}.kw span:nth-child(5){color:#7C3AED;animation-delay:8s}
+@keyframes kw{0%{opacity:0;transform:scale(.6) rotate(-6deg)}4%,16%{opacity:1;transform:none}20%,100%{opacity:0;transform:scale(1.3);filter:blur(8px)}}
+.u6 h1{font-size:clamp(22px,2.6vw,32px);margin-top:20px}.u6 p{color:#57534E;margin:10px 0 24px}
+/* 7 before/after */
+.u7{display:grid;grid-template-rows:auto 1fr;padding:44px 50px;background:#FFFBF5}
+.u7 .hd{text-align:center;margin-bottom:22px}.u7 h1{font-size:clamp(28px,3.6vw,46px);letter-spacing:-.03em}.u7 h1 em{font-style:normal;color:#EA580C}.u7 .hd p{color:#78716C;margin-top:6px}
+.cmp{position:relative;height:360px;border-radius:24px;overflow:hidden;user-select:none;box-shadow:0 30px 60px -40px rgba(0,0,0,.5)}
+.sd{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center}
+.sd.bf{padding-right:50%;background:#E7E5E4;color:#78716C;filter:grayscale(1)}.sd.af{padding-left:50%;background:linear-gradient(135deg,#FDE68A,#F9A8D4,#A5F3FC);clip-path:inset(0 0 0 var(--p,50%))}
+.sd .em{font-size:64px;letter-spacing:10px}.sd h3{font-size:26px}.sd small{font-size:15px}
+.knob{position:absolute;top:0;bottom:0;left:var(--p,50%);width:4px;margin-left:-2px;background:#fff}.knob::after{content:"⟷";position:absolute;top:50%;left:50%;width:54px;height:54px;margin:-27px;border-radius:50%;background:#EA580C;color:#fff;display:grid;place-items:center;font-size:24px;box-shadow:0 10px 20px -8px #EA580C}
+.cmp input{position:absolute;inset:0;width:100%;opacity:0;cursor:ew-resize}.u7 .row{display:flex;gap:12px;justify-content:center;margin-top:22px}
+/* 8 WhatsApp chat */
+.u8{background:#F0FDF4;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:50px 60px}
+.u8 h1{font-size:clamp(32px,4.2vw,54px);letter-spacing:-.03em;line-height:1.06}.u8 h1 em{font-style:normal;color:#16A34A}.u8 p{color:#57534E;font-size:17px;margin:16px 0 24px}
+.ph{width:340px;margin:auto;border-radius:40px;background:#fff;border:10px solid #1C1917;overflow:hidden;box-shadow:0 40px 60px -36px rgba(0,0,0,.5)}
+.ph .bar2{display:flex;align-items:center;gap:10px;background:#075E54;color:#fff;padding:14px 16px}.ph .bar2 img{width:34px;height:34px;border-radius:50%;background:#fff}.ph .bar2 small{display:block;font-size:11px;opacity:.8}
+.msgs{height:400px;background:#ECE5DD;padding:14px;display:flex;flex-direction:column;gap:8px;overflow:hidden}
+.m{max-width:82%;padding:9px 12px;border-radius:12px;font-size:13.5px;line-height:1.45;box-shadow:0 1px 1px rgba(0,0,0,.1);opacity:0;animation:min .35s forwards}.m.p{align-self:flex-end;background:#DCF8C6;border-top-right-radius:2px}.m.e{align-self:flex-start;background:#fff;border-top-left-radius:2px}
+.m small{display:block;text-align:right;font-size:10px;color:#94A3B8}@keyframes min{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.typ{align-self:flex-start;background:#fff;border-radius:12px;padding:10px 14px;opacity:0}.typ i{display:inline-block;width:6px;height:6px;margin:0 2px;border-radius:50%;background:#94A3B8;animation:dot 1s infinite}.typ i:nth-child(2){animation-delay:.2s}.typ i:nth-child(3){animation-delay:.4s}@keyframes dot{50%{transform:translateY(-4px)}}
+/* 9 bento */
+.u9{background:#F5F5F4;padding:24px;display:grid;grid-template-columns:1.5fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:16px}
+.bx{border-radius:26px;padding:24px;position:relative;overflow:hidden}.bx.big{grid-row:span 2;background:#FFEDD5;display:flex;flex-direction:column;justify-content:center}
+.bx.big h1{font-size:clamp(30px,3.6vw,50px);letter-spacing:-.03em;line-height:1.05}.bx.big h1 em{font-style:normal;color:#EA580C}.bx.big p{color:#57534E;margin:14px 0 22px}
+.bx small{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.7}.bx .n{font-size:58px;font-weight:900;letter-spacing:-.04em;line-height:1}
+.b2{background:#DBEAFE;color:#1E3A8A}.b3{background:#FCE7F3;color:#9D174D}.b4{background:#DCFCE7;color:#14532D}.b5{background:#FEF3C7;color:#78350F}
+.b3 .cr{position:absolute;right:-30px;bottom:-30px;font-size:120px;animation:rot 12s linear infinite;opacity:.9}
+.b4 .pin{font-size:46px;display:inline-block;animation:bounce 1.2s infinite}@keyframes bounce{50%{transform:translateY(-12px)}}
+.cyc{position:relative;height:46px;margin-top:10px}.cyc span{position:absolute;font-size:24px;font-weight:800;opacity:0;animation:cy 13.5s infinite}@keyframes cy{0%{opacity:0;transform:translateY(20px)}2%,9%{opacity:1;transform:none}11%,100%{opacity:0;transform:translateY(-20px)}}
+/* 10 handprint / paint splash */
+.u10{background:#fff;display:grid;place-items:center;text-align:center;padding:50px 20px}
+.spl{position:absolute;border-radius:50%;opacity:0;animation:spl .6s cubic-bezier(.3,1.6,.6,1) forwards,bob 5s ease-in-out infinite}
+.spl::before,.spl::after{content:"";position:absolute;border-radius:50%;background:inherit}.spl::before{width:30%;height:30%;right:-14%;top:10%}.spl::after{width:18%;height:18%;left:-12%;bottom:6%}
+@keyframes spl{from{opacity:0;transform:scale(0)}to{opacity:1;transform:scale(1)}}@keyframes bob{50%{translate:0 -10px}}
+.hand{position:absolute;font-size:60px;opacity:0;animation:spl .5s forwards}
+.u10 .ct{position:relative;z-index:2}.u10 h1{font-size:clamp(36px,5.6vw,76px);letter-spacing:-.04em;line-height:1}.u10 h1 .c1{color:#EA580C}.u10 h1 .c2{color:#DB2777}.u10 h1 .c3{color:#0284C7}
+.u10 p{color:#57534E;margin:18px auto 26px;max-width:560px;font-size:17px}.u10 .row{display:flex;gap:12px;justify-content:center}
+@media(max-width:900px){.u2,.u4,.u5,.u8{grid-template-columns:1fr;padding:36px 22px}.u9{grid-template-columns:1fr 1fr}.bx.big{grid-column:span 2;grid-row:auto}.ph{width:300px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style></head><body>
+<div class="top"><h2>10 completely different hero concepts</h2><p>Each one uses a different idea, not just a different picture. Tell me the number.</p></div>
+
+<section class="opt"><div class="lab"><b>1</b>EUREKA letter tiles <small>· letters flip to reveal courses</small></div><div class="hero u1">
+<div class="tiles">
+<div class="tl" style="--i:0;--c:#F97316"><b>E</b><i>💃</i></div><div class="tl" style="--i:1;--c:#EC4899"><b>U</b><i>🎨</i></div><div class="tl" style="--i:2;--c:#8B5CF6"><b>R</b><i>🔤</i></div><div class="tl" style="--i:3;--c:#0EA5E9"><b>E</b><i>🧮</i></div><div class="tl" style="--i:4;--c:#22C55E"><b>K</b><i>✍️</i></div><div class="tl" style="--i:5;--c:#EAB308"><b>A</b><i>💬</i></div></div>
+<h1>The moment your child says “I can do it!”</h1><p>9 courses for kids &amp; adults in Moolapalayam, Erode — online &amp; offline since 2014.</p><div class="row"><a class="btn or">📞 Call 99650 32227</a><a class="btn wh">📍 Visit us</a></div></div></section>
+
+<section class="opt"><div class="lab"><b>2</b>Age picker <small>· parents tap their child’s age, courses appear</small></div><div class="hero u2">
+<div><h1>What’s right for your <span>child?</span></h1><p class="s">Tap your child’s age. We’ll show the classes that fit best.</p>
+<div class="ages" id="ages"><button data-a="0" class="on">1.5–3<small>Toddler</small></button><button data-a="1">4–7<small>Early years</small></button><button data-a="2">8–12<small>School kids</small></button><button data-a="3">13+<small>Teens &amp; adults</small></button></div></div>
+<div class="rec"><h3 id="rh">Perfect for ages 1.5–3</h3><div class="rl" id="rl"></div><a class="btn or">📞 Book a free visit · 99650 32227</a></div></div></section>
+
+<section class="opt"><div class="lab"><b>3</b>Magic torch reveal <small>· move your mouse to uncover hidden doodles</small></div><div class="hero u3" id="u3">
+<div class="doo"><span style="left:6%;top:10%">🎨</span><span style="left:22%;top:62%">💃</span><span style="left:40%;top:6%">🧮</span><span style="left:64%;top:70%">✍️</span><span style="left:82%;top:16%">🔤</span><span style="left:12%;top:36%">⭐</span><span style="left:88%;top:58%">🎵</span><span style="left:52%;top:84%">📚</span><span style="left:74%;top:40%">🌈</span><span style="left:32%;top:84%">🔥</span><span style="left:4%;top:80%">💬</span><span style="left:92%;top:86%">🏆</span></div>
+<div class="ct"><h1>Discover the hidden<br>talent in your child</h1><p>Abacus · Phonics · Dance · Drawing · and more — in Moolapalayam, Erode.</p><a class="btn or">📞 Call 99650 32227</a></div><div class="hint">✨ Move your mouse around</div></div></section>
+
+<section class="opt"><div class="lab"><b>4</b>Happy-hour clock <small>· a live clock highlighting class timings</small></div><div class="hero u4">
+<div><h1>5 pm is the <em>happiest hour</em> of the day</h1><p>After school, your child learns, plays and grows with caring teachers.</p><div class="slot"><span>Mon–Sat · 5–8 pm</span><span>Sun · 10:30 am–12 pm</span></div><a class="btn or">📞 Call 99650 32227</a></div>
+<div class="clk"><svg viewBox="0 0 100 100"><circle class="arc" cx="50" cy="50" r="36" stroke="#FDBA74" stroke-dasharray="56.5 226" transform="rotate(60 50 50)" stroke-width="9"/><circle class="arc" cx="50" cy="50" r="36" stroke="#86EFAC" stroke-dasharray="28 226" transform="rotate(-135 50 50)" stroke-width="9"/>
+<g font-size="6" font-weight="800" text-anchor="middle" fill="#78716C"><text x="50" y="14">12</text><text x="88" y="52">3</text><text x="50" y="91">6</text><text x="12" y="52">9</text></g></svg>
+<div class="hand hh"></div><div class="hand mh"></div><div class="ctr"></div><span class="lb" style="right:-6%;bottom:22%;color:#C2410C">💃 5–8 pm</span><span class="lb" style="left:2%;top:12%;color:#15803D">☀️ Sun 10:30</span></div></div></section>
+
+<section class="opt"><div class="lab"><b>5</b>Report card <small>· skills bars fill up, then an “Eureka” stamp</small></div><div class="hero u5">
+<div><h1>Watch their <em>confidence</em> score go up</h1><p>Real skills, real progress — Abacus, Phonics, Handwriting, Spoken English and more.</p><a class="btn or">📞 Call 99650 32227</a> <a class="btn wh">📍 Visit us</a></div>
+<div class="rc"><h3><span>EUREKA PROGRESS CARD</span><span>⭐⭐⭐</span></h3><p class="nm">Student: Your child · Term: This year</p>
+<div class="gr" style="--d:.4s;--w:92%">Confidence<div class="bar"><i></i></div><b>A+</b></div><div class="gr" style="--d:1s;--w:88%">Creativity<div class="bar"><i></i></div><b>A+</b></div><div class="gr" style="--d:1.6s;--w:84%">Mental maths<div class="bar"><i></i></div><b>A</b></div><div class="gr" style="--d:2.2s;--w:90%">Speaking<div class="bar"><i></i></div><b>A+</b></div><div class="gr" style="--d:2.8s;--w:86%">Handwriting<div class="bar"><i></i></div><b>A</b></div>
+<div class="stamp">EUREKA<br>STAR ★</div></div></div></section>
+
+<section class="opt"><div class="lab"><b>6</b>Giant action words <small>· the whole screen changes colour with each word</small></div><div class="hero u6">
+<div><div class="kw"><span>DANCE.</span><span>DRAW.</span><span>SPEAK.</span><span>COUNT.</span><span>SHINE.</span></div>
+<h1>All under one roof in Moolapalayam, Erode</h1><p>9 courses · Online &amp; offline · Since 2014</p><a class="btn or">📞 Call 99650 32227</a></div></div></section>
+
+<section class="opt"><div class="lab"><b>7</b>Screen time vs Eureka time <small>· drag the slider</small></div><div class="hero u7">
+<div class="hd"><h1>Swap screen time for <em>Eureka time</em></h1><p>Drag the circle and see the difference ✨</p></div>
+<div class="cmp" id="cmp"><div class="sd bf"><div class="em">📱📺🎮</div><h3>Hours on screens</h3><small>Bored · tired · alone</small></div><div class="sd af"><div class="em">💃🎨🧮</div><h3>Evenings at Eureka</h3><small>Dancing · drawing · making friends</small></div><div class="knob"></div><input type="range" min="0" max="100" value="50" aria-label="Compare"></div>
+<div class="row"><a class="btn or">📞 Call 99650 32227</a><a class="btn wh">📍 Visit us</a></div></div></section>
+
+<section class="opt"><div class="lab"><b>8</b>Parent chat <small>· a real-feeling WhatsApp conversation types itself</small></div><div class="hero u8">
+<div><h1>Questions? We reply like <em>family.</em></h1><p>Just message or call — we’ll help you pick the right class for your child.</p><a class="btn or" style="background:#16A34A;box-shadow:0 14px 26px -12px #16A34A">💬 WhatsApp us</a> <a class="btn wh">📞 99650 32227</a></div>
+<div class="ph"><div class="bar2"><img src="assets/logo.png" alt=""><div><b>Eureka Academy</b><small>online</small></div></div><div class="msgs" id="msgs"></div></div></div></section>
+
+<section class="opt"><div class="lab"><b>9</b>Bento board <small>· every tile tells parents something, each one moves</small></div><div class="hero u9">
+<div class="bx big"><small style="color:#C2410C">Eureka Academy · Erode</small><h1>Everything your child needs to <em>grow</em></h1><p>9 courses, caring teachers, online &amp; offline.</p><div><a class="btn or">📞 Call 99650 32227</a></div></div>
+<div class="bx b2"><small>Trusted since</small><div class="n" id="yr">2000</div><div>happy learners every year</div></div>
+<div class="bx b3"><small>Courses</small><div class="cyc"><span>💃 Western Dance</span><span style="animation-delay:1.5s">🔥 Zumba</span><span style="animation-delay:3s">अ Hindi</span><span style="animation-delay:4.5s">💬 English</span><span style="animation-delay:6s">🔤 Phonics</span><span style="animation-delay:7.5s">✍️ Handwriting</span><span style="animation-delay:9s">🧮 Abacus</span><span style="animation-delay:10.5s">🎨 Drawing</span><span style="animation-delay:12s">📚 Tuition</span></div><span class="cr">🎡</span></div>
+<div class="bx b4"><small>Find us</small><div><span class="pin">📍</span></div><b>Moolapalayam, Erode</b></div>
+<div class="bx b5"><small>Class time</small><div class="n" style="font-size:36px">5–8 pm</div><div>Mon–Sat · Sun 10:30–12</div></div></div></section>
+
+<section class="opt"><div class="lab"><b>10</b>Paint splash &amp; handprints <small>· colours splash in, little handprints appear</small></div><div class="hero u10" id="u10">
+<div class="ct"><h1><span class="c1">Little hands.</span><br><span class="c2">Big colours.</span><br><span class="c3">Bright futures.</span></h1><p>Dance, drawing, abacus, phonics and more — at Eureka Academy, Moolapalayam, Erode.</p><div class="row"><a class="btn or">📞 Call 99650 32227</a><a class="btn wh">📍 Visit us</a></div></div></div></section>
+
+<script>
+// 2 age picker
+const R=[[['🧸','Toddler Care','Play, songs & stories','#FCE7F3'],['🔤','Phonics','First sounds & letters','#F3E8FF'],['🎨','Drawing','Colours & shapes','#DBEAFE']],
+[['🔤','Phonics','Read with confidence','#F3E8FF'],['✍️','Handwriting','Neat letters','#FAE8FF'],['💃','Western Dance','Rhythm & fun','#FFEDD5']],
+[['🧮','Abacus','Fast mental maths','#DCFCE7'],['💬','Spoken English','Speak with confidence','#E0F2FE'],['📚','Tuition','School support','#ECFCCB']],
+[['🔥','Zumba','Fun fitness','#FEF3C7'],['अ','Hindi','Read & speak','#FFE4E6'],['💬','Spoken English','Interviews & daily talk','#E0F2FE']]];
+const L=['1.5–3','4–7','8–12','13+'];
+function show(a){document.getElementById('rh').textContent='Perfect for ages '+L[a];document.getElementById('rl').innerHTML=R[a].map((r,i)=>`<div class="ri" style="animation-delay:${i*.1}s"><span style="--c:${r[3]}">${r[0]}</span><div><b>${r[1]}</b><small>${r[2]}</small></div></div>`).join('');document.querySelectorAll('#ages button').forEach(b=>b.classList.toggle('on',b.dataset.a==a))}
+document.querySelectorAll('#ages button').forEach(b=>b.onclick=()=>show(b.dataset.a));show(0);
+// 3 torch
+const u3=document.getElementById('u3');let auto=true,t=0;u3.addEventListener('pointermove',e=>{auto=false;const r=u3.getBoundingClientRect();u3.style.setProperty('--mx',(e.clientX-r.left)+'px');u3.style.setProperty('--my',(e.clientY-r.top)+'px')});
+u3.addEventListener('pointerleave',()=>auto=true);setInterval(()=>{if(!auto)return;t+=.03;u3.style.setProperty('--mx',(50+38*Math.cos(t))+'%');u3.style.setProperty('--my',(50+30*Math.sin(t*1.7))+'%')},30);
+// 7 slider
+const cmp=document.getElementById('cmp');cmp.querySelector('input').oninput=e=>cmp.style.setProperty('--p',e.target.value+'%');
+// 8 chat
+const M=[['p','Hi! Do you have abacus classes for my 7 year old? 🙂','5:02 pm'],['e','Yes! 🎉 Abacus is perfect at 7. Classes are Mon–Sat 5–8 pm.','5:02 pm'],['p','Is it online or offline?','5:03 pm'],['e','Both! 💻🏫 You can choose what suits you.','5:03 pm'],['p','Can we visit first?','5:04 pm'],['e','Of course! Come to Poondurai Road, Moolapalayam. We’d love to meet you both 😊','5:04 pm']];
+const box=document.getElementById('msgs');function chat(){box.innerHTML='';let d=0;M.forEach((m,i)=>{if(m[0]=='e'){const ty=document.createElement('div');ty.className='typ';ty.innerHTML='<i></i><i></i><i></i>';setTimeout(()=>{ty.style.opacity=1;box.appendChild(ty)},d);d+=1100;setTimeout(()=>ty.remove(),d)}
+setTimeout(()=>{const el=document.createElement('div');el.className='m '+m[0];el.innerHTML=m[1]+'<small>'+m[2]+(m[0]=='p'?' ✓✓':'')+'</small>';box.appendChild(el)},d);d+=1000});setTimeout(chat,d+3500)}chat();
+// 9 counter
+const yr=document.getElementById('yr');let y=2000;const ci=setInterval(()=>{y++;yr.textContent=y;if(y>=2014)clearInterval(ci)},90);
+// 10 splashes
+const u10=document.getElementById('u10');const SC=['#FDBA74','#F9A8D4','#93C5FD','#86EFAC','#FDE68A','#C4B5FD'];
+[[4,8,140],[80,6,170],[6,64,180],[84,62,150],[44,-6,90],[30,80,80],[64,82,110],[92,34,70]].forEach((s,i)=>{const d=document.createElement('span');d.className='spl';Object.assign(d.style,{left:s[0]+'%',top:s[1]+'%',width:s[2]+'px',height:s[2]+'px',background:SC[i%6],animationDelay:(i*.25)+'s, '+(i*.25+.6)+'s'});u10.appendChild(d)});
+[[18,30,'🖐️',-20],[72,28,'✋',15],[26,76,'🤚',10],[70,74,'🖐️',-10]].forEach((h,i)=>{const d=document.createElement('span');d.className='hand';d.textContent=h[2];Object.assign(d.style,{left:h[0]+'%',top:h[1]+'%',rotate:h[3]+'deg',animationDelay:(2.2+i*.3)+'s'});u10.appendChild(d)});
+</script></body></html>
