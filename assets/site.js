@@ -107,3 +107,4 @@ document.addEventListener('click',function(e){var a=e.target.closest('a[href^="#
   t.parentNode.insertBefore(c,t);
   var h=document.getElementById('hd');function s(){h&&h.classList.toggle('sc2',scrollY>8)}addEventListener('scroll',s,{passive:true});s();
 })();
+(function(){var f=document.querySelector('.nf'),b=document.querySelector('.fab');if(!f||!b||!('IntersectionObserver'in window))return;new IntersectionObserver(function(e){b.classList.toggle('fab-off',e[0].isIntersecting)}).observe(f)})();
