@@ -1628,3 +1628,4 @@ main p,main li{hyphens:none}
 @media(max-width:1000px){.tq-body{grid-template-columns:1fr}}
 @media(max-width:560px){.tq-g{grid-template-columns:1fr!important}.tq-c{grid-template-columns:70px 1fr}.tq-ph{width:70px!important;height:70px!important}}
 .tq-c{align-content:center;grid-auto-rows:min-content}.tq-c>*:not(.tq-ph){grid-column:2}.tq-ph{grid-row:1/span 5!important;align-self:center}.tq-q{text-align:left!important}
+.td-vb{display:flex!important;flex-direction:row!important;flex-wrap:wrap;gap:12px!important;align-items:center}.td-vb .btn{width:auto!important;margin:0!important;white-space:nowrap}@media(max-width:560px){.td-vb .btn{flex:1 1 100%;justify-content:center}}
