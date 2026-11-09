@@ -1757,3 +1757,418 @@ main p,main li{hyphens:none}
 @media(max-width:960px){.lx-in{grid-template-columns:1fr;gap:34px}.lx-vis{padding-left:0}.lx-sw{left:auto;right:12px;top:12px;transform:scale(.8);transform-origin:top right}.lx-tr{gap:16px;justify-content:space-between}.lx-tr b{font-size:18px}}
 @media(prefers-reduced-motion:reduce){.lx *{animation:none!important}}
 @media(max-width:960px){.lx-sw{transform:scale(.6)!important;right:6px;top:6px}.lx-bt a{flex:1;text-align:center}}
+
+
+/* ==========================================================================
+   MASTER UI REDESIGN & REALISTIC ANIMATIONS (ALL PAGES UPGRADE)
+   ========================================================================== */
+
+:root {
+  --real-ink: #0F172A;
+  --real-ink-light: #334155;
+  --real-muted: #64748B;
+  --real-line: #E2E8F0;
+  --real-primary: #EA580C;
+  --real-primary-gradient: linear-gradient(135deg, #EA580C 0%, #F97316 50%, #FB923C 100%);
+  --real-purple-gradient: linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #9333EA 100%);
+  --real-card-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.04), 0 20px 25px -5px rgba(15, 23, 42, 0.06), 0 0 0 1px rgba(15, 23, 42, 0.04);
+  --real-card-hover: 0 20px 35px -10px rgba(15, 23, 42, 0.12), 0 10px 15px -5px rgba(234, 88, 12, 0.08), 0 0 0 1.5px rgba(234, 88, 12, 0.3);
+}
+
+/* Global Smoothness & Typography */
+body {
+  color: var(--real-ink) !important;
+  background: #FFFFFF !important;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 1. Header Upgrade across all pages */
+.hd {
+  background: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(18px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(180%) !important;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8) !important;
+  box-shadow: 0 4px 20px -5px rgba(15, 23, 42, 0.03) !important;
+  transition: all 0.3s ease !important;
+}
+.brand img {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.brand:hover img {
+  transform: rotate(-6deg) scale(1.1);
+}
+.nav a {
+  position: relative;
+  transition: all 0.25s ease !important;
+}
+.nav a:hover {
+  background: #F1F5F9 !important;
+  color: var(--real-primary) !important;
+  transform: translateY(-1px);
+}
+.nav a[aria-current=page] {
+  background: #FFF7ED !important;
+  color: var(--real-primary) !important;
+  font-weight: 700 !important;
+}
+
+/* 2. Universal Bento Cards on ALL Pages */
+.ck, .cc, .ev, .tq-c, .path, .why, .td-a, .td-w, .cx1-i > div, .facts-card, .band, .ab-do, .ab-val {
+  background: #FFFFFF !important;
+  border: 1px solid var(--real-line) !important;
+  border-radius: 20px !important;
+  box-shadow: var(--real-card-shadow) !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.3s ease !important;
+  position: relative;
+  overflow: hidden;
+}
+.ck:hover, .cc:hover, .ev:hover, .tq-c:hover, .path:hover, .why:hover, .td-a:hover, .td-w:hover, .cx1-i > div:hover, .ab-do:hover, .ab-val:hover {
+  transform: translateY(-7px) scale(1.01) !important;
+  box-shadow: var(--real-card-hover) !important;
+  border-color: rgba(234, 88, 12, 0.3) !important;
+}
+
+/* Realistic Image Zoom on Hover */
+.ck-i, .tq-ph, .tq-f-ph, .ev-i {
+  overflow: hidden !important;
+  border-radius: 16px !important;
+}
+.ck-i img, .tq-ph img, .tq-f-ph img, .ev-i img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.ck:hover .ck-i img, .tq-c:hover .tq-ph img, .tq-f:hover .tq-f-ph img, .ev:hover .ev-i img {
+  transform: scale(1.08) !important;
+}
+
+/* 3. Subpage Heroes Upgrade (Courses, Events, About, Toddler, Contact) */
+.ph, .ph-c, .ev-hero, .ab-hero, .td-hero, .cx1-s {
+  background: 
+    radial-gradient(circle at 85% 15%, rgba(234, 88, 12, 0.08), transparent 45%),
+    radial-gradient(circle at 15% 85%, rgba(99, 102, 241, 0.07), transparent 45%),
+    linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%) !important;
+  position: relative;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8) !important;
+  padding: 60px 0 !important;
+}
+.ph h1, .ev-hd h1, .ab-hero h1, .td-hi h1, .cx1-l h1 {
+  font-family: var(--f-head) !important;
+  font-size: clamp(32px, 4.4vw, 54px) !important;
+  font-weight: 800 !important;
+  line-height: 1.12 !important;
+  letter-spacing: -0.035em !important;
+  color: var(--real-ink) !important;
+  margin-top: 14px !important;
+}
+.ev-hd p, .ab-hero .lede, .td-hi .lede, .cx1-d {
+  font-size: 17.5px !important;
+  line-height: 1.65 !important;
+  color: var(--real-muted) !important;
+  max-width: 620px !important;
+  margin-top: 16px !important;
+}
+
+/* 4. Filter Buttons (Courses, Events) */
+.ev-fs button, .ck-fs button {
+  background: #FFFFFF !important;
+  border: 1.5px solid var(--real-line) !important;
+  padding: 9px 20px !important;
+  border-radius: 999px !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  color: var(--real-ink-light) !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+.ev-fs button:hover, .ck-fs button:hover {
+  background: #F8FAFC !important;
+  border-color: #CBD5E1 !important;
+  color: var(--real-ink) !important;
+}
+.ev-fs button.on, .ck-fs button.on {
+  background: var(--real-ink) !important;
+  color: #FFFFFF !important;
+  border-color: var(--real-ink) !important;
+  box-shadow: 0 4px 14px -3px rgba(15, 23, 42, 0.4) !important;
+}
+
+/* 5. Buttons Styling & Shimmer */
+.btn-dark {
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px -3px rgba(15, 23, 42, 0.3) !important;
+  font-weight: 700 !important;
+  transition: all 0.25s ease !important;
+}
+.btn-dark:hover {
+  background: var(--real-primary-gradient) !important;
+  box-shadow: 0 10px 24px -6px rgba(234, 88, 12, 0.5) !important;
+  transform: translateY(-2px) !important;
+  color: #FFFFFF !important;
+}
+.btn-line {
+  border: 1.5px solid var(--real-line) !important;
+  background: #FFFFFF !important;
+  color: var(--real-ink) !important;
+  font-weight: 600 !important;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04) !important;
+}
+.btn-line:hover {
+  border-color: var(--real-primary) !important;
+  color: var(--real-primary) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 16px -4px rgba(234, 88, 12, 0.15) !important;
+}
+
+/* 6. Contact Page Enhancements */
+.cx1-i {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 16px !important;
+  margin-top: 28px !important;
+}
+@media (max-width: 600px) {
+  .cx1-i {
+    grid-template-columns: 1fr !important;
+  }
+}
+.cx1-i > div {
+  padding: 20px !important;
+}
+.cx1-i > div span {
+  font-size: 26px !important;
+  margin-bottom: 10px !important;
+  display: block;
+}
+.cx1-i small {
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  color: var(--real-primary) !important;
+  display: block !important;
+  margin-bottom: 4px !important;
+}
+.cx1-i b {
+  font-size: 15px !important;
+  color: var(--real-ink) !important;
+  display: block !important;
+  line-height: 1.4 !important;
+}
+.cx-f {
+  background: #FFFFFF !important;
+  border: 1px solid var(--real-line) !important;
+  border-radius: 24px !important;
+  padding: 36px 32px !important;
+  box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.08) !important;
+}
+.cx-f input, .cx-f select, .cx-f textarea {
+  border: 1.5px solid var(--real-line) !important;
+  border-radius: 12px !important;
+  padding: 12px 16px !important;
+  font-size: 14.5px !important;
+  transition: all 0.2s ease !important;
+  background: #F8FAFC !important;
+}
+.cx-f input:focus, .cx-f select:focus, .cx-f textarea:focus {
+  border-color: var(--real-primary) !important;
+  background: #FFFFFF !important;
+  box-shadow: 0 0 0 4px rgba(234, 88, 12, 0.12) !important;
+  outline: none !important;
+}
+
+/* 7. Toddler Care Page Enhancements */
+.td-g3 {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 24px !important;
+}
+@media (max-width: 800px) {
+  .td-g3 {
+    grid-template-columns: 1fr !important;
+  }
+}
+.td-a {
+  padding: 32px 26px !important;
+}
+.td-a span {
+  font-size: 34px !important;
+  margin-bottom: 16px !important;
+  display: block;
+}
+.td-steps {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 20px !important;
+}
+@media (max-width: 900px) {
+  .td-steps {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (max-width: 500px) {
+  .td-steps {
+    grid-template-columns: 1fr !important;
+  }
+}
+.td-steps li {
+  background: #FFFFFF !important;
+  border: 1px solid var(--real-line) !important;
+  border-radius: 20px !important;
+  padding: 28px 24px !important;
+  box-shadow: var(--real-card-shadow) !important;
+  position: relative;
+  transition: transform 0.3s ease !important;
+}
+.td-steps li:hover {
+  transform: translateY(-6px) !important;
+}
+.td-steps b {
+  display: inline-block !important;
+  font-family: var(--f-head) !important;
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  color: var(--real-primary) !important;
+  background: #FFF7ED !important;
+  border: 1px solid #FFEDD5 !important;
+  padding: 4px 12px !important;
+  border-radius: 999px !important;
+  margin-bottom: 14px !important;
+}
+
+/* 8. Events Page Cards Upgrade */
+.ev-g {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 28px !important;
+}
+@media (max-width: 992px) {
+  .ev-g {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (max-width: 600px) {
+  .ev-g {
+    grid-template-columns: 1fr !important;
+  }
+}
+.ev {
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 0 !important;
+}
+.ev-i {
+  height: 200px !important;
+  position: relative !important;
+}
+.ev-i img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+.ev-b {
+  padding: 24px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex-grow: 1 !important;
+}
+.ev-dt {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+  color: var(--real-primary) !important;
+  margin-bottom: 8px !important;
+}
+.ev h3 {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  color: var(--real-ink) !important;
+  margin-bottom: 8px !important;
+  line-height: 1.3 !important;
+}
+.ev p {
+  font-size: 14.5px !important;
+  color: var(--real-muted) !important;
+  line-height: 1.6 !important;
+  margin-bottom: 20px !important;
+  flex-grow: 1 !important;
+}
+
+/* 9. About Page Team & Founder Bento Cards */
+.fd-c {
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%) !important;
+  border-radius: 28px !important;
+  padding: 48px !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25) !important;
+}
+.fd-b h2 {
+  color: #FFFFFF !important;
+  font-size: 32px !important;
+}
+.fd-q {
+  color: #FDBA74 !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  margin: 6px 0 24px !important;
+}
+.fd-l li {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 16px !important;
+  padding: 16px !important;
+}
+.fd-l b {
+  color: #FFFFFF !important;
+  font-size: 20px !important;
+}
+.fd-l span {
+  color: #CBD5E1 !important;
+  font-size: 13px !important;
+}
+
+.tq-f {
+  background: #FFFFFF !important;
+  border: 1px solid var(--real-line) !important;
+  border-radius: 28px !important;
+  padding: 36px !important;
+  box-shadow: var(--real-card-shadow) !important;
+  margin-bottom: 40px !important;
+}
+.tq-f-tx h3 {
+  font-size: 28px !important;
+  font-weight: 800 !important;
+}
+.tq-tag {
+  background: #FFF7ED !important;
+  color: var(--real-primary) !important;
+  border: 1px solid #FFEDD5 !important;
+  font-weight: 700 !important;
+  font-size: 12px !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  padding: 5px 12px !important;
+  border-radius: 999px !important;
+}
+.tq-chips li {
+  background: #F8FAFC !important;
+  border: 1px solid var(--real-line) !important;
+  border-radius: 999px !important;
+  padding: 6px 14px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+}
+
+/* 10. Floating Interactive WhatsApp button */
+.fab {
+  box-shadow: 0 12px 28px -6px rgba(37, 211, 102, 0.6) !important;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease !important;
+}
+.fab:hover {
+  transform: scale(1.08) translateY(-4px) !important;
+  box-shadow: 0 16px 36px -6px rgba(37, 211, 102, 0.8) !important;
+}
